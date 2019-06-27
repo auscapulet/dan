@@ -1,0 +1,78 @@
+@import url("https://use.typekit.net/hzq2lbo.css");
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.nav  {
+  margin: 32px 0;
+  background-color: #ffffff;
+  width: 1280px;
+  text-align: center;
+}
+
+.nav_item  {
+  color: #16A085;
+  text-decoration: none;
+  margin: 35px;
+  font-size: 18px;
+  font-family: courier-std;
+  font-weight: bolder;
+  font-style: normal;
+
+
+}
+
+.main {
+   width: 1280px;
+   background-color: #f5f6f7;
+}
+
+h2 {
+  font-size: 22px;
+  margin-top: 55px;
+  margin-bottom: 33px;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.container {
+  text-align: center;
+  font-family: courier-std;
+  font-weight: 700;
+  margin: 0px 112px 41px 112px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #373737;
+  font-weight: 900;
+}
+
+.btn_container {
+  text-align: center;
+}
+
+.btn {
+  width: 192px;
+  height: 51px;
+  background-color: #16A085;
+  color: #ffffff;
+  padding: 18px 45px;
+  font-size: 12px;
+  border: 0;
+  border-radius: 3px;
+  margin-bottom: 91px;
+}
+
+footer {
+   width: 1280px;
+}
+
+.footer {
+  text-align: right;
+  margin: 45px 0;
+  margin-right: 104px;
+  font-size: 16px;
+  font-family: courier-std;
+  font-weight: 700;
+}
+
+
