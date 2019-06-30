@@ -1,0 +1,128 @@
+@import url("https://use.typekit.net/bqw2tbb.css");
+
+@font-face {
+  font-family: 'Myriad Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Regular'), url('MYRIADPRO-REGULAR.woff') format('woff');
+  }
+
+header {
+  margin-top: 61px;
+}
+
+.name_logo {
+  text-decoration: none;
+  font-size: 80px;
+  margin-left: 100px;
+  color: #000000;
+  font-family: 'Myriad Pro Regular', sans-serif;
+  font-weight: 500;
+}
+
+.nav {
+  background-color: #35444f;
+  width: 1280px;
+  text-align: center;
+  margin: 45px 100px 0px 100px;    
+}
+
+.nav_item {
+  color: #ffffff; 
+  display: inline-block;
+  font-size: 24px;
+  margin: 22px 30px;
+  font-family: 'Myriad Pro Regular', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.main_content {
+  width: 1480px;
+}
+.sidebar {
+  border: 1px solid #6d7982;
+  width: 345px;
+  margin-left: 100px;
+  margin-top: 50px;
+  cursor: pointer;
+  /* display: inline-block ?? */
+}
+
+.sidebar_item {
+  font-size: 29px;
+  text-align: left;
+  color: #6d7982;
+  padding: 25px 50px;
+}
+
+.selected_item {
+  color: #000000;
+  background-color: #dbdbdb;
+  padding-left: 69px;
+}
+
+.content_container {
+  width: 880px;
+  position: relative;
+  left: 500px;
+  bottom: 396px;
+}
+
+.img_container {
+  padding: 75px 297px  73px 268px;
+  border: 1px solid #6d7982;
+   /* display: inline-block ?? */
+}
+
+.img_container:hover .ramda,
+.img_container:focus .ramda{
+  transform: scale(1.2);
+  transition: all 1s;
+}
+
+.text_container {
+  position: relative;
+  margin-top: 50px;
+  text-align: justify;
+}
+
+.text_content {
+  font-family: 'Myriad Pro Regular', sans-serif;
+  font-size: 18px;
+  padding: 0 30px;;
+  color: #2c2c2c;
+  line-height: 24px;
+}
+
+.footer {
+  width: 1280px;
+  text-align: left;
+  margin: 50px 100px 30px 100px;
+  background-color: #b4b7ba;
+  text-align: center;
+  position: relative;
+  bottom: 410px;
+}
+
+.first_item {
+  margin-left: 20px;
+}
+.footer_item {
+  font-size: 28px;
+  font-family: 'Myriad Pro Regular', sans-serif;
+  display: inline-block;
+  margin: 24px 12px;
+  cursor: pointer;
+}
+
+.footer_item:hover,
+.footer_item:active {
+  color: #3181a6;
+  border-bottom: 1px solid #3181a6;
+}
+
+.copy {
+  font-size: 24px;
+  margin-left: 170px;
+}
