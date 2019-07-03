@@ -7,6 +7,11 @@
   src: local('Myriad Pro Regular'), url('MYRIADPRO-REGULAR.woff') format('woff');
   }
 
+body {
+  margin: 0px auto;
+  width: 1480px;
+}
+
 header {
   margin-top: 61px;
 }
