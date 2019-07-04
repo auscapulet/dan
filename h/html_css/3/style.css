@@ -1,0 +1,62 @@
+@import url("https://use.typekit.net/mgu5yhd.css");
+
+.cover {
+  background: url("./background@1X.png");
+  background-repeat: no-repeat;
+  background-position: cover;
+  width: 1368px;
+  margin: 0px auto;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.img_logo {
+  float: left;
+}
+
+.text_logo {
+  font-size: 29px;
+  font-family: "courier-std", monospace;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.text_logo_lower {
+  font-size: 18px;
+  color: white;
+  font-family: "courier-std", monospace;
+}
+
+.contacts_container {
+  float: right;
+}
+.contacts {
+  color:  white;
+  font-family: "courier-std", monospace;
+  font-size: 18px
+}
+
+.card_container {
+  
+}
+
+.tours .card_container {
+  float: left;
+}
+
+.tours {
+  /* overflow: hidden; */
+}
+
+.clearfix {
+
+}
+
+.card_name {
+  font-family: "courier-std", monospace;
+  font-size: 18px;
+  color: white;
+}
