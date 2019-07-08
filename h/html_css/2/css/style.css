@@ -61,6 +61,7 @@
   color: black;
   background-color: #dbdbdb;
   border-left: 1px solid;
+  cursor: pointer;
 }
 
 .content_container {
@@ -75,7 +76,7 @@
 .img_container {
   display: inline-block;
   height: 530px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   border: 1px solid #6d7982;
 }
 
@@ -99,18 +100,20 @@
   padding: 0 30px;;
   color: #2c2c2c;
   line-height: 24px;
+  margin: 15px
 }
 
 .footer {
   background-color: #b4b7ba;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .footer_item {
   font-size: 28px;
   display: inline-block;
-  padding: 20px 12px;
+  padding: 20px 10px;
   cursor: pointer;
 }
 
