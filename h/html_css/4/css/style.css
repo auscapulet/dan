@@ -1,6 +1,4 @@
 .container {
-  width: 1366px;
-  margin: 0 auto;
   background: url("../img/rana-sawalha-364253-unsplash@1X.png") no-repeat;
   background-size: cover;
   font-family: Verdana, sans-serif;
@@ -14,9 +12,10 @@
 
 .logo {
   float: left;
-  padding: 22px 81px 19px;
+  padding: 22px 150px 19px;
   font-size: 20px;
   font-weight: bold;
+  transition: .2s linear color;
   color: #ffffff;  
 }
 
@@ -25,27 +24,50 @@
   color: #3cb878;
 }
 
-/* .header-icon {
+.header-icon {
   float: right;
-  /background-image: url('../img/css_sprites.png'); 
-  background: url('../img/css_sprites.png');
-  z-index: 100;
-  margin: 19px 25px 17px 0;
-} */
-
-/* .icon-calendaer {
-  width: 19px;
-  height: 19px;
-  background: url('../img/css_sprites.png');
-  background-position:  -20px -80px;
+  background: url('../img/sprites.png');
   background-repeat: no-repeat;
-  color:  #3cb878;
-} */
+  width: 28px; 
+  height: 20px;
+  margin: 18px 14px 16px 14px;
+}
+
+.header-icon:hover {
+  cursor: pointer;
+  transition: .4s linear background-position;
+}
+
+.icon-calendar {
+  background-position:  -0px -40px;
+  margin-right: 0;
+}
+
+.icon-calendar:hover {
+  background-position:  -40px -40px;
+}
+
+.icon-msg {
+  background-position:  -0px -0px;
+}
+
+.icon-msg:hover {
+  background-position:  -40px 0px;
+}
+
+.icon-compass {
+  background-position:   -0px -20px;
+  margin-right: 0;
+}
+
+.icon-compass:hover {
+  background-position: -40px -20px;
+}
 
 .authorization {
   float: right;
   color: #ffffff;
-  padding: 22px 83px 19px;
+  padding: 22px 82px 19px 24px;
 }
 
 .header-link {
@@ -59,7 +81,8 @@
 }
 
 .form-container {
-  margin: 65px 461px 10px;
+  margin-top: 3.7%;
+  margin-left: 35%;
   background: #ffffff;
   border-radius: 10px;
   width: 445px;
@@ -67,14 +90,13 @@
   padding-top: 29px;
 }
 
-
 .form-header-signup {
   font-size: 20px;
   color: #434343;
   padding: 29px 0px 15px 60px;
 }
 
-.form-header-signup:before {
+.form-header-signup::before {
   content: '';
   width: 18px;
   height: 18px;
@@ -83,7 +105,6 @@
   background-color: #3cb878;
   top: 10px;
   left: -47px;
-  z-index: 2;
 }
 
 .form-header-login {
@@ -97,15 +118,6 @@
 .form-header-login:hover {
   text-decoration: underline;
 }
-
-/* .form-header-signup:before {
-  content: '';
-  font-size: 0;
-  border: #3cb878 9px solid;
-  position: relative;
-  right: 32px;
-  bottom: 5px;
-} */
 
 
 .fb-btn {
@@ -126,7 +138,7 @@
   background-position: left 20px bottom 13px;
 }
 
-.fb-bt:hover{
+.fb-btn:hover{
   cursor: pointer;
   background-color: #264b96;
 }
@@ -153,12 +165,36 @@
 }
 
 .option {
-  margin-top: 33px;
   text-align: center;
 }
 
 .or {
+  display: inline-block;
+  position: relative;
   font-size: 14px;
+  color: #8c8c8c;
+  margin-top: 33px;
+  margin-bottom: 18px;
+}
+
+.or:before,
+.or:after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  width: 140px;
+  border-top: 1px #eaeaea solid;
+  z-index: auto;
+}
+
+.or:before{
+  right: 10px;
+  margin-right: 20px;
+}
+
+.or:after {
+  left: 10px;
+  margin-left: 20px;
 }
 
 .signup-input {
