@@ -1,0 +1,233 @@
+.container {
+  width: 1366px;
+  margin: 0 auto;
+  background: url("../img/rana-sawalha-364253-unsplash@1X.png") no-repeat;
+  background-size: cover;
+  font-family: Verdana, sans-serif;
+  height: 100vh;
+}
+
+.header { 
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  float: left;
+  padding: 22px 81px 19px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;  
+}
+
+.logo:hover{
+  cursor: pointer;
+  color: #3cb878;
+}
+
+/* .header-icon {
+  float: right;
+  /background-image: url('../img/css_sprites.png'); 
+  background: url('../img/css_sprites.png');
+  z-index: 100;
+  margin: 19px 25px 17px 0;
+} */
+
+/* .icon-calendaer {
+  width: 19px;
+  height: 19px;
+  background: url('../img/css_sprites.png');
+  background-position:  -20px -80px;
+  background-repeat: no-repeat;
+  color:  #3cb878;
+} */
+
+.authorization {
+  float: right;
+  color: #ffffff;
+  padding: 22px 83px 19px;
+}
+
+.header-link {
+  color: #3cb878;
+  font-size: 14px;
+}
+
+.header-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.form-container {
+  margin: 65px 461px 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  width: 445px;
+  padding-bottom: 20px;
+  padding-top: 29px;
+}
+
+
+.form-header-signup {
+  font-size: 20px;
+  color: #434343;
+  padding: 29px 0px 15px 60px;
+}
+
+.form-header-signup:before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  border: 1px solid #3cb878;
+  background-color: #3cb878;
+  top: 10px;
+  left: -47px;
+  z-index: 2;
+}
+
+.form-header-login {
+  float: right;
+  font-size: 14px;
+  color: #329a65;
+  margin-right: 60px;
+  line-height: 20px;
+}
+
+.form-header-login:hover {
+  text-decoration: underline;
+}
+
+/* .form-header-signup:before {
+  content: '';
+  font-size: 0;
+  border: #3cb878 9px solid;
+  position: relative;
+  right: 32px;
+  bottom: 5px;
+} */
+
+
+.fb-btn {
+  display: inline-block;
+  background-color: #305db8;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: right;
+  width: 156px;
+  height: 46px;
+  margin-top: 15px;
+  margin-left: 60px;
+  padding-right: 17px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url('../img/facebook1@1X.png');
+  background-repeat: no-repeat;
+  background-position: left 20px bottom 13px;
+}
+
+.fb-bt:hover{
+  cursor: pointer;
+  background-color: #264b96;
+}
+
+.googleplus-btn {
+  display: inline-block; 
+  margin-left: 8px;
+  width: 157px;
+  height: 46px;
+  background-color: #c3412c;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  padding-left: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("../img/G+@1X.png");
+  background-repeat: no-repeat;
+  background-position: left 20px bottom 13px;
+}
+
+.googleplus-btn:hover{
+  cursor: pointer;
+  background-color: #d37464;
+}
+
+.option {
+  margin-top: 33px;
+  text-align: center;
+}
+
+.or {
+  font-size: 14px;
+}
+
+.signup-input {
+  display: block;
+  box-sizing: border-box;
+  width: 320px;
+  height: 46px;
+  margin: 0 60px 9px; 
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  color: #eaeaea;
+  padding: 17px 0 17px 17px;
+}
+
+.signup-input:focus {
+  margin-bottom: 17px;
+  transition-duration: 0.5s;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.confirmation {
+  margin: 12px 0px 28px 60px;
+}
+
+.confirm-checkbox {
+  margin-right: 10px;
+  box-sizing: border-box;
+  height: 20px;
+  width: 20px;
+  /* margin-top: 10px; */
+}
+
+.confirm-checkbox:hover {
+  cursor: pointer;
+}
+
+.terms {
+  color: #3cb878;
+}
+
+.terms:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.btn-container{
+  margin: 0 60px;
+}
+
+.creation-btn {
+  width: 320px;
+  height: 46px;
+  border-radius: 4px;
+  background-color: #3cb878;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.creation-btn:hover{
+  cursor: pointer;
+  background-color: #329a65;
+}
+
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+

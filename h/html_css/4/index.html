@@ -13,10 +13,10 @@
     <header class="header clearfix">
       <nav class="nav">
         <a href="#" class="logo">JOURNEY</a>
-        <a href="#" class="icon-calendar"></a>
-        <a href="#" class="icon-msg"></a>
-        <a href="#" class="icon-compass"></a>
-        <p class="authorization">Welcome, <a href="#" class="header-login">Log in</a>or <a href="#" class="header-signup">Sign Up</a></p>
+        <p class="authorization">Welcome, <a href="#" class="header-link">Log in</a> or <a href="#" class="header-link">Sign Up</a></p>
+        <a href="#" class="header-icon icon-calendar"></a>
+        <a href="#" class="header-icon icon-msg"></a>
+        <a href="#" class="header-icon icon-compass"></a>
       </nav>
     </header>
     <div class="form-container">
@@ -25,23 +25,24 @@
         <a href="#" class="form-header-login">Log in</a>
       </div>
       <div class="social-buttons">
-        <a href="#" class="fb-btn"><button>Facebook</button></a>
-        <a href="#" class="googleplus-btn"><button>Google</button></a>
+        <a href="#"><button class="fb-btn">Facebook</button></a>
+        <a href="#" ><button class="googleplus-btn">Google</button></a>
       </div>
       <div class="option">
         <p class="or">or</p>
       </div>
       <form action="" class="authoriazation-form">
-        <input type="text" class="singup-input">
-        <input type="text" class="singup-input">
-        <input type="email" class="singup-input">
-        <input type="password" class="singup-input">
-        <input type="password" class="singup-input">
+        <input type="text" class="signup-input " placeholder="First name">
+        <input type="text" class="signup-input " placeholder="Last name">
+        <input type="email" class="signup-input " placeholder="Email">
+        <input type="password" class="signup-input " placeholder="Choose password">
+        <input type="password" class="signup-input " placeholder="Confirm password">
         <div class="confirmation">
-          <input type="checkbox" class="confirm-checkbox"><span>Agree our <a href="#" class="terms">Terms & Conditions</a></span>
+          <input type="checkbox" class="confirm-checkbox">
+          <label for="confirm-checkbox">Agree our <a href="#" class="terms">Terms & Conditions</a></label>
         </div>
-        <div class="creation-btn">
-          <button>Crate Account</button>
+        <div class="btn-container">
+          <button class="creation-btn">Create Account</button>
         </div>
       </form>
     </div>
