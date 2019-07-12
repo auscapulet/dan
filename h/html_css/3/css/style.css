@@ -1,27 +1,27 @@
 .container {
-  background: url("./img/background.png") no-repeat;
-  background-position: cover;
+  background: url("../img/background.png") no-repeat;
+  background-size: cover;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
 }
 
 .inner_container {
   width: 1063px;
-  margin: 0 auto;
   padding-top: 49px;
   padding-bottom: 20px;
+  margin: 0 auto;
 }
 
 .header_logo {
   float: left;
   color: white;
-  background-image: url("./img/milan-holidays-logo.png");
+  background-image: url("../img/milan-holidays-logo.png");
   background-repeat: no-repeat;
 }
 
 .header_logo:hover {
   color: #f26522;
-  background-image: url("./img/milan-holidays-logo-hover.png");
+  background-image: url("../img/milan-holidays-logo-hover.png");
 }
 
 .header_logo_text {
@@ -72,27 +72,27 @@
 }
 
 #background_1 {
-  background: url("./img/shopping-tours-img.png") no-repeat;
+  background: url("../img/shopping-tours-img.png") no-repeat;
 }
 
 #background_2 {
-  background: url("./img/sightseeing-tours-img.png") no-repeat;
+  background: url("../img/sightseeing-tours-img.png") no-repeat;
 }
 
 #background_3 {
-  background: url('./img/food-tours-img.png') no-repeat;
+  background: url('../img/food-tours-img.png') no-repeat;
 }
 
 #background_4 {
-  background: url('./img/bars-nightlife-img.png') no-repeat;
+  background: url('../img/bars-nightlife-img.png') no-repeat;
 }
 
 #background_5 {
-  background: url("./img/art-architecture-img.png") no-repeat;
+  background: url("../img/art-architecture-img.png") no-repeat;
 }
 
 #background_6 {
-  background: url("./img/walking-tours-img.png") no-repeat;
+  background: url("../img/walking-tours-img.png") no-repeat;
 }
 
 .tours_item_details {
@@ -126,7 +126,7 @@
 
 .details-text-action {
   float: right;
-  background-image: url("./img/arrow.png");
+  background-image: url("../img/arrow.png");
   background-repeat: no-repeat;
   background-position: right;
   margin-right: 18px;
