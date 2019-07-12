@@ -67,7 +67,7 @@
 .authorization {
   float: right;
   color: #ffffff;
-  padding: 22px 82px 19px 24px;
+  padding: 22px 93px 19px 36px;
 }
 
 .header-link {
@@ -83,6 +83,7 @@
 .form-container {
   margin-top: 3.7%;
   margin-left: 35%;
+  margin-bottom: 5%;
   background: #ffffff;
   border-radius: 10px;
   width: 445px;
@@ -212,6 +213,7 @@
   font-size: 14px;
   color: #eaeaea;
   padding: 17px 0 17px 17px;
+  outline: none;
 }
 
 .signup-input:focus {
