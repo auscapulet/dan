@@ -27,8 +27,8 @@
 }
 
 .table-cell {
-  width: 277px;
-  height: 70px;
+  width: 275px;
+  height: 69px;
   text-align: center;
   vertical-align: middle;
   font-family: 'Arimo', sans-serif;
@@ -36,7 +36,6 @@
 
 .corner {
   width: 310px;
-  box-shadow: inset -3px 0px 6px -3px rgba(0, 0, 0, 0.27)
 }
 
 .fas {
@@ -54,10 +53,6 @@
   box-shadow: inset -3px 0px 6px -3px rgba(0, 0, 0, 0.27)
 }
 
-.title {
-  font-size: 30px;
-}
-
 .header {
   font-size: 24px;
   background-color: #fafafa;
@@ -66,16 +61,48 @@
   box-shadow: inset -3px 0px 6px -3px rgba(0, 0, 0, 0.27)
 }
 
+.header.standart,
+.header.ultimate,
+.header.premium {
+  height: 70px;
+}
+
+.title {
+  font-size: 18px;
+}
+
 .header:first-child {
   color: #484848;
 }
 
 .sub-title {
   display: block;
-  font-size: 18px;
+  font-size: 30px;
 }
 
-.price {
+.full-number {
+  display: inline-block;
+  font-size: 60px;
+  text-align: center;
+  padding: 18 0px;
+}
+
+.cents {
+  position: relative;
+  font-size: 24px;
+  bottom: 25px;
+}
+
+.monthly {
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+  right: 30px;
+}
+
+.full-number,
+.cents, 
+.monthly {
   color: #484848;
 }
 
@@ -97,7 +124,9 @@
 
 .footer {
   box-shadow: inset -3px 0px 6px -3px rgba(0, 0, 0, 0.27);
+  background-color: #eeeeee;
 }
+
 
 .btn {
   display: inline-block;
