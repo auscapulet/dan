@@ -85,19 +85,22 @@
   font-size: 60px;
   text-align: center;
   padding: 18 0px;
+  position: relative;
+  left: 15px;
 }
 
 .cents {
   position: relative;
   font-size: 24px;
   bottom: 25px;
+  left: 15px;
 }
 
 .monthly {
   font-size: 18px;
   font-weight: 400;
   position: relative;
-  right: 30px;
+  right: 15px;
 }
 
 .full-number,
