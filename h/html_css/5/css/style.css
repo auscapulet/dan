@@ -1,0 +1,135 @@
+/* @import url('https://fonts.googleapis.com/css?family=Arimo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Arimo:700&display=swap');
+
+@font-face {
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Arimo-Regular") url("../fonts/Arimo-Regular.ttf") format('truetype');
+  src: url("../fonts/Arimo-Regular.eot") format('eot');
+  src: url("../fonts/Arimo-Regular.svg") format('svg');
+  src: local("Arimo-Regular") url("../fonts/Arimo-Regular.woff2") format('woff2');
+  src: local("Arimo-Regular") url("../fonts/Arimo-Regular.woff") format('woff'); 
+}
+
+@font-face {
+  font-family: "Arimo-bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Arimo-Bold.ttf") format('ttf');
+} */
+
+.table {
+  border: #3a4965 solid;
+  border-width: 24px 30px 32px 22px;
+  color: #484848;
+  border-collapse: collapse;
+}
+
+.table-cell {
+  width: 277px;
+  height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Arimo', sans-serif;
+}
+
+.corner {
+  width: 310px;
+  box-shadow: inset -3px 0px 6px -3px rgba(0, 0, 0, 0.27)
+}
+
+.fas {
+  font-size: 24px;
+  color: #848484;
+}
+
+.bg-dark{
+  background-color: #e3e3e3;
+  box-shadow: inset -3px 0px 6px -3px rgba(0, 0, 0, 0.27)
+}
+
+.bg-light {
+  background-color: #f2f2f2;
+  box-shadow: inset -3px 0px 6px -3px rgba(0, 0, 0, 0.27)
+}
+
+.title {
+  font-size: 30px;
+}
+
+.header {
+  font-size: 24px;
+  background-color: #fafafa;
+  font-weight: 700;
+  color: #ffffff;
+  box-shadow: inset -3px 0px 6px -3px rgba(0, 0, 0, 0.27)
+}
+
+.header:first-child {
+  color: #484848;
+}
+
+.sub-title {
+  display: block;
+  font-size: 18px;
+}
+
+.price {
+  color: #484848;
+}
+
+.standart {
+  background-color: #89c331;
+}
+
+.ultimate {
+  background-color: #f04a56;
+}
+
+.premium {
+  background-color: #20807c;
+}
+
+.footer:first-child {
+  background-color: #dddddd;
+}
+
+.footer {
+  box-shadow: inset -3px 0px 6px -3px rgba(0, 0, 0, 0.27);
+}
+
+.btn {
+  display: inline-block;
+  width: 192px;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 17px 0;
+  font-size: 16px;
+  text-align: center;
+  margin: 30px 43px;
+  font-family: "Arimo";
+  font-weight: 700;
+}
+
+.btn.darky:hover{
+  box-shadow: 4px 4px 4px 4px #404040;
+}
+
+.btn.standart:hover{
+  box-shadow: 4px 4px 4px 4px #79b027;
+}
+
+.btn.ultimate:hover{
+  box-shadow: 4px 4px 4px 4px #df3a46;;
+}
+
+.btn.premium:hover{
+  box-shadow: 4px 4px 4px 4px #16736f;
+}
+
+.darky {
+  background-color: #484848;
+  color: #ffffff;
+  margin: 30px 59px;
+}
