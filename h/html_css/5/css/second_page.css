@@ -67,11 +67,13 @@ td:nth-child(even) {
   margin-top: 5px;
 }
 
+
 .plan {
-  height: 167px;
+  height: 157px;
   color: #ffffff;
   font-weight: 700;
   font-size: 24px;
+  padding-top: 10px;
 }
 
 .price-standart:before{
