@@ -1,0 +1,145 @@
+.table {
+  border: #3a4965 solid;
+  border-width: 30px 27px 22px 30px;
+  color: #484848;
+  border-collapse: collapse;
+}
+
+.table-cell {
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Arimo', sans-serif;
+  font-size: 16px;
+  box-shadow: inset -3px 0px 6px -3px rgba(0, 0, 0, 0.27);
+  width: 157px;
+  height: 166px;
+}
+
+th:nth-child(odd),
+td:nth-child(odd) {
+  background-color: #e3e3e3;
+}
+
+th:nth-child(even),
+td:nth-child(even) {
+  background-color:#f2f2f2;
+}
+
+.header {
+  height: 112px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.title  {
+  font-size: 14px;
+  font-weight: bold;
+  color: #484848;
+  display: block;
+}
+
+.sub-title {
+  font-size: 20px;
+  font-weight: bold;
+  color:  #484848
+}
+
+.fas {
+  font-size: 24px;
+  color:#848484;
+  display: inline-block;
+}
+
+.corner {
+  width: 198px;
+}
+
+.corner:first-child {
+  background-color: #fafafa;
+}
+
+.corner.header {
+  height: 112px;
+}
+
+.nameplate {
+  display: block;
+  margin-top: 5px;
+}
+
+.plan {
+  height: 167px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.price-standart:before{
+  content: '17';
+  font-size: 36px;
+  position: absolute;
+  left: -13px;
+  bottom: 22px;
+}
+
+.price-ultimate:before{
+  content: '37';
+  font-size: 36px;
+  position: absolute;
+  left: -13px;
+  bottom: 22px;
+}
+
+.price-premium:before{
+  content: '97';
+  font-size: 36px;
+  position: absolute;
+  left: -13px;
+  bottom: 22px;
+}
+
+.price {
+  font-size: 14px;
+  position: relative;
+  left: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.price:after {
+  content: '.99';
+  font-size: 18px;
+  position: absolute;
+  left: 32px;
+  bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  width: 145px;
+  padding: 12px 0;
+  position: relative;
+  bottom: 18px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #484848;
+  box-shadow: 0 5px 0 #404040;
+}
+
+.btn:hover{
+  box-shadow: 4px 4px 4px 4px #404040;
+}
+
+td.standart {
+  background-color: #89c331;
+}
+
+td.ultimate {
+  background-color: #f04a56;
+}
+
+td.premium {
+  background-color: #20807c;
+}
