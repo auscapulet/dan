@@ -66,6 +66,7 @@
   text-align: center;
   font-size: 27px;
   color: #fff;
+  margin-bottom: 45px;
 }
 
 .lastest-news-btn  {
@@ -76,7 +77,7 @@
   text-align: center;
   border-radius: 3px;
   color: #fff;
-  line-height: 45px;
+  line-height: 55px;
 }
 
 .bg-sub {
@@ -96,8 +97,8 @@
 .inner-container {
   height: 85%;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-content: space-between;
   text-align: center;
@@ -127,4 +128,57 @@
 .inner-container-width {
   width: 1170px;
   padding: 0 255px;
+}
+
+.popular-clients {
+  height: 590px;
+  background: url("../img/html_css_homework_homework6_img_parallax-bg.jpeg") fixed center;
+  background-size: cover;
+}
+
+.clients-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  padding-top: 200px;
+}
+
+.clients-title::after {
+  content: "";
+  position: absolute;
+  top: 1770px;
+  right: 50%;
+  border-top: 3px solid #169cb4;
+  width: 60px;
+}
+
+.clients-list {
+  display: grid;
+  grid-template-columns: 208px 135px 172px 141px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 115px 400px 0  400px;
+}
+
+#client-1 {
+  background: url("../img/Layer\ 3@1X.png") no-repeat;
+  height: 50px;
+}
+
+#client-2 {
+  background: url("../img/logo-8@1X.png") no-repeat;
+  height: 49px;
+
+}
+
+#client-3 {
+  background: url("../img/Layer\ 2@1X.png") no-repeat;
+  height: 42px;
+
+}
+
+#client-4 {
+  background: url("../img/logo-3@1X.png") no-repeat;
+  height: 52px;
 }
