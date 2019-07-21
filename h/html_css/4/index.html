@@ -12,7 +12,10 @@
   <div class="container">
     <header class="header clearfix">
       <nav class="nav">
-        <a href="#" class="logo">JOURNEY</a>
+        <div class="logo-container">
+            <a href="#" class="logo-text">JOURNEY</a>
+        </div>
+        
         <p class="authorization">Welcome, <a href="#" class="header-link">Log in</a> or <a href="#" class="header-link">Sign Up</a></p>
         <a href="#" class="header-icon icon-compass"></a>
         <a href="#" class="header-icon icon-msg"></a>
@@ -25,24 +28,24 @@
         <a href="#" class="form-header-login">Log in</a>
       </div>
       <div class="social-buttons">
-        <a href="#"><button class="fb-btn">Facebook</button></a>
-        <a href="#" ><button class="googleplus-btn">Google</button></a>
+        <button class="fb-btn">Facebook</button>
+        <button class="googleplus-btn">Google</button>
       </div>
-      <p class="option">
+      <div class="option">
         <span class="or">or</span>
-      </p>
+      </div>
       <form action="" class="authoriazation-form">
-        <input type="text" class="signup-input " placeholder="First name">
-        <input type="text" class="signup-input " placeholder="Last name">
-        <input type="email" class="signup-input " placeholder="Email">
-        <input type="password" class="signup-input " placeholder="Choose password">
-        <input type="password" class="signup-input " placeholder="Confirm password">
-        <div class="confirmation">
-          <input type="checkbox" id="confirm-checkbox">
-          <label for="confirm-checkbox">Agree our <a href="#" class="terms">Terms & Conditions</a></label>
-        </div>
-        <div class="btn-container">
-          <button class="creation-btn">Create Account</button>
+        <div class="autorization-form__input-container">
+          <input type="text" class="signup-input " placeholder="First name">
+          <input type="text" class="signup-input " placeholder="Last name">
+          <input type="email" class="signup-input " placeholder="Email">
+          <input type="password" class="signup-input " placeholder="Choose password">
+          <input type="password" class="signup-input " placeholder="Confirm password">
+          <div class="confirmation">
+            <input type="checkbox" id="confirm-checkbox">
+            <label for="confirm-checkbox">Agree our <a href="#" class="terms">Terms & Conditions</a></label>
+          </div>
+            <button class="creation-btn">Create Account</button>
         </div>
       </form>
     </div>
