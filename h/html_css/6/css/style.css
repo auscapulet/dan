@@ -256,8 +256,7 @@
   font-size: 18px;
   font-weight: 700;
   color: #353a3d;
-  padding: 15px 0;
-  
+  padding-bottom: 17px;
 }
 
 .news-text {
@@ -270,9 +269,41 @@
 }
 
 .s-container-fixer {
-  padding: 0 6%;
+  padding: 0 5%;
+  padding-top: 14px;
+  text-align: center;
 }
 
 .m-container-fixer {
   padding: 3% 5%;
+}
+
+.footer {
+  height: 80px;
+  display: grid;
+  grid-template-columns: 45% 7% 7%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1d2124;
+  margin-top: 71px;
+}
+
+.footer-text {
+  font-size: 13px;
+  color: #c3c4c5;
+}
+
+.footer-logo-pic {
+  padding-left: 390%;
+  padding-top: 5px;
+  margin-right: 3px;
+}
+
+.footer-logo {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: sans-serif;
+  font-stretch: 100%;
+  color: #E4E4E4;
+  padding-left: 40px;
 }
