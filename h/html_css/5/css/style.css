@@ -1,10 +1,7 @@
-/* @import url('https://fonts.googleapis.com/css?family=Arimo&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Arimo:700&display=swap');
-
 @font-face {
   font-family: 'Arimo';
   font-style: normal;
-  font-weight: ;
+  font-weight: 400;
   src: local("Arimo-Regular") url("../fonts/Arimo-Regular.ttf") format('truetype');
   src: url("../fonts/Arimo-Regular.eot") format('eot');
   src: url("../fonts/Arimo-Regular.svg") format('svg');
@@ -17,7 +14,7 @@
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/Arimo-Bold.ttf") format('ttf');
-} */
+} 
 
 .table {
   border: #3a4965 solid;
