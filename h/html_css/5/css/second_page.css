@@ -1,3 +1,25 @@
+@font-face {
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Arimo-Regular") url("../fonts/Arimo-Regular.ttf") format('truetype');
+  src: url("../fonts/Arimo-Regular.eot") format('eot');
+  src: url("../fonts/Arimo-Regular.svg") format('svg');
+  src: local("Arimo-Regular") url("../fonts/Arimo-Regular.woff2") format('woff2');
+  src: local("Arimo-Regular") url("../fonts/Arimo-Regular.woff") format('woff'); 
+}
+
+@font-face {
+  font-family: "Arimo-bold";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Arimo-Bold") url("../fonts/Arimo-Bold.ttf") format('truetype');
+  src: url("../fonts/Arimo-Bold.eot") format('eot');
+  src: url("../fonts/Arimo-Bold.svg") format('svg');
+  src: local("Arimo-bold") url("../fonts/Arimo-Bold.woff") format('woff');
+  src: local("Arimo-bold") url("../fonts/Arimo-Bold.woff2") format("woff2")
+} 
+
 .table {
   border: #3a4965 solid;
   border-width: 30px 27px 22px 30px;
@@ -67,6 +89,22 @@ td:nth-child(even) {
   margin-top: 5px;
 }
 
+.number {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.cents {
+  font-size: 18px;
+  font-weight: bold;
+  vertical-align: super;
+}
+
+.date {
+  font-size: 14px;
+  font-weight: 400;
+}
 
 .plan {
   height: 157px;
@@ -76,49 +114,10 @@ td:nth-child(even) {
   padding-top: 10px;
 }
 
-.price-standart:before{
-  content: '17';
-  font-size: 36px;
-  position: absolute;
-  left: -13px;
-  bottom: 22px;
-}
-
-.price-ultimate:before{
-  content: '37';
-  font-size: 36px;
-  position: absolute;
-  left: -13px;
-  bottom: 22px;
-}
-
-.price-premium:before{
-  content: '97';
-  font-size: 36px;
-  position: absolute;
-  left: -13px;
-  bottom: 22px;
-}
-
-.price {
-  font-size: 14px;
-  position: relative;
-  left: 25px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-
-.price:after {
-  content: '.99';
-  font-size: 18px;
-  position: absolute;
-  left: 32px;
-  bottom: 40px;
-}
-
 .btn {
   display: inline-block;
   width: 145px;
+  margin-top: 40px;
   padding: 12px 0;
   position: relative;
   bottom: 18px;

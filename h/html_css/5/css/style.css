@@ -12,8 +12,12 @@
 @font-face {
   font-family: "Arimo-bold";
   font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Arimo-Bold.ttf") format('ttf');
+  font-weight: bold;
+  src: local("Arimo-Bold") url("../fonts/Arimo-Bold.ttf") format('truetype');
+  src: url("../fonts/Arimo-Bold.eot") format('eot');
+  src: url("../fonts/Arimo-Bold.svg") format('svg');
+  src: local("Arimo-bold") url("../fonts/Arimo-Bold.woff") format('woff');
+  src: local("Arimo-bold") url("../fonts/Arimo-Bold.woff2") format("woff2")
 } 
 
 .table {
