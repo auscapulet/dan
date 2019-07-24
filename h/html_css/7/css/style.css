@@ -1,0 +1,38 @@
+.star-wars {
+  display: flex;
+  height: 100vh;
+  color: yellow;
+  letter-spacing: 12px;
+  perspective: 500px;
+  background-color: black;
+  text-align: justify;
+}
+
+.star-wars-crawl {
+  position: relative;
+  animation: crawl 30s linear infinite;
+}
+
+.star-wars-title {
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: 22px;
+  padding-bottom: 80px;
+  font-weight: 700;
+}
+
+.star-wars-text {
+  padding-bottom: 50px;
+}
+
+@keyframes crawl {
+  0% {
+    top: 600px;
+    transform: rotateX(35deg) translateZ(0);
+  }
+
+  100% {
+    top: -1800px;
+    transform: rotateX(35deg) translateZ(-1800px)
+  }
+}
