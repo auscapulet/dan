@@ -140,7 +140,7 @@
   text-align: center;
   margin: 30px 43px;
   font-family: "Arimo";
-  font-weight: 700;
+  /* font-weight: 700; */
 }
 
 .btn.darky:hover{
