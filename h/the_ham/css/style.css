@@ -8,6 +8,7 @@ body {
   background: url("../img/bg-1.png") fixed no-repeat;
   background-size: cover;
   color: #fff;
+  text-align: center;
 }
 
 .inner-container {
@@ -21,18 +22,47 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: 120px;
+  
 }
 
 .logo {
   position: relative;
   display: flex;
   align-items: center;
+  margin-left: 15%;
+}
+
+.logo::before,
+.logo::after {
+  content: "";
+  position: absolute;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+}
+
+.logo::before {
+  bottom: 100%;
+  right: 68px;
+  border-bottom: 18px solid #18cfab;
+}
+
+.logo::after {
+  top: 100%;
+  right: 68px;
+  border-top: 18px solid #18cfab;
 }
 
 .logo-icon {
   font-size: 40px;
   font-weight: bold;
+  color: #fff;
+  background-color: #18cfab;
+  padding: 0 13.5px;
 }
+
+
 
 .logo-text {
   font-size: 16px;
@@ -48,11 +78,13 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 55%
+  width: 55%;
+  margin-right: 15%;
 }
 
 .nav-item {
   font-size: 13px;
+  color: #fff;
 }
 
 .nav-item:hover {
