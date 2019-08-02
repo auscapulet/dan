@@ -44,13 +44,13 @@ body {
 
 .logo::before {
   bottom: 100%;
-  right: 68px;
+  right: 76px;
   border-bottom: 18px solid #18cfab;
 }
 
 .logo::after {
   top: 100%;
-  right: 68px;
+  right: 76px;
   border-top: 18px solid #18cfab;
 }
 
@@ -68,6 +68,7 @@ body {
   font-size: 16px;
   font-weight: bold;
   color: #fff;
+  margin-left: 8px;
 }
 
 .green-text {
@@ -171,6 +172,26 @@ body {
 .section-title {
   font-size: 36px;
   color: #898989;
+  position: relative;
+}
+
+.section-title::after,
+.section-title::before {
+  content: "";
+  position: absolute;
+  width: 76px;
+  left: 46%;
+  border-top: 1px solid #18cfab;
+}
+
+.section-title::before {
+  top: 62px;
+  left: 45%;
+}
+
+.section-title::after {
+  top: 65px;
+  left: 47%;
 }
 
 .works-title {
