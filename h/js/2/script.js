@@ -1,12 +1,7 @@
-let arr = [];
-
-function askingNumber() {
-  number = prompt("Please, tell me your number");
-  number = parseInt(number)
-}
+const arr = [];
 
 function filterArr() {
-  askingNumber()
+  const number = parseInt(prompt("Please, tell me your number"));
 
   for (let i = 1; i <= number; i++) {
     if (i % 5 === 0) {
