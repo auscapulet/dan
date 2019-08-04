@@ -1,7 +1,6 @@
 function calculating() {
   let firstNumber = +prompt("Please, enter a first number")
   let secondNumber = +prompt("Please, enter a second number")
-
   let mathOperation = prompt("Pelase, enter an operation")
   switch (mathOperation) {
     case "+":
