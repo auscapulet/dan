@@ -1,8 +1,8 @@
-const name = prompt("tell me your name, please", "")
+const name = prompt("tell me your name, please")
 while (name.length === 0) {
   name = prompt('Please, insert your name!');
 }
-const age = prompt("tell me tour age please", "")
+const age = prompt("tell me tour age please")
 while (isFinite(age) === false) {
   age = prompt('Please, insert your age!');
 }
