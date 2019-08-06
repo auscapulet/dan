@@ -1,5 +1,11 @@
-const name = prompt("tell me your name, please")
-const age = prompt("tell me tour age please")
+const name = prompt("tell me your name, please", "")
+while (name.length === 0) {
+  name = prompt('Please, insert your name!');
+}
+const age = prompt("tell me tour age please", "")
+while (isFinite(age) === false) {
+  age = prompt('Please, insert your age!');
+}
 
 if (age < 18) {
   alert("You are not allowed to visit this website")
@@ -13,4 +19,3 @@ if (age < 18) {
 } else {
   alert("Welcome" + " " + name)
 }
-

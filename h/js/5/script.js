@@ -43,4 +43,4 @@ function createNewUser() {
   newUser.getPassword()
   newUser.getPasswordAdvanced()
 }
-createNewUser()
+//createNewUser()
