@@ -1,0 +1,23 @@
+.newColor {
+  background-color: black;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+  margin: 20px;
+}
+
+.input {
+  width: 100px;
+  height: 100px;
+}
+
+.redCircle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+}
