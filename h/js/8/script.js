@@ -8,11 +8,10 @@ document.getElementsByTagName("script")[0].before(input)
 
 const tip = document.createElement("span")
 tip.before(input)
-// tip.innerText = `Текущая цена: ${inputValue}`
 
 const tipButton = document.createElement("button")
 tipButton.innerText = "x"
-tipButton.before(input)
+tipButton.classList.add("tipButton")
 
 const errorMessage = document.createElement("p")
 errorMessage.innerText = "Pleae enter correct price"
@@ -46,5 +45,5 @@ input.addEventListener("focusout", event => {
 
 tipButton.addEventListener("click", event => {
   event.currentTarget.remove()
-  tip.innerText = ""
+  tip.remove()
 })
