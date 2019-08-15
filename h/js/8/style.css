@@ -1,0 +1,16 @@
+.container {
+  width: 100vh;
+  margin: 0 auto;
+  margin-top: 10%;
+  font-size: 20px;
+}
+
+.active {
+  border: 5px solid seagreen;
+  border-radius: 4px;
+}
+
+.wrong {
+  border: 5px solid red;
+  border-radius: 4px;
+}
