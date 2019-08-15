@@ -1,23 +1,50 @@
-const input = document.getElementById("price")
+// creation
 
-const tip = document.createElement("p")
-tip.classList.add("errorMessage")
+const input = document.createElement("input")
+input.setAttribute("placeholder", "Price")
+input.setAttribute("type", "text")
+
+document.getElementsByTagName("script")[0].before(input)
+
+const tip = document.createElement("span")
+tip.before(input)
+// tip.innerText = `Текущая цена: ${inputValue}`
+
+const tipButton = document.createElement("button")
+tipButton.innerText = "x"
+tipButton.before(input)
+
+const errorMessage = document.createElement("p")
+errorMessage.innerText = "Pleae enter correct price"
+
+// events and functions
 
 input.addEventListener("focusin", event => {
   input.classList.add("active")
   input.classList.remove("wrong")
+  tip.remove()
+  tipButton.remove()
+  errorMessage.remove()
 })
 
 input.addEventListener("focusout", event => {
   let inputValue = parseInt(event.target.value)
   console.log(inputValue)
 
-  if (inputValue !== Number(inputValue) >= 0 && "") {
+  // checker
+
+  if (inputValue !== "" && inputValue >= 0) {
     input.classList.add("active")
+    document.getElementsByTagName("script")[0].before(tip)
+    tip.innerText = `Текущая цена: ${inputValue}`
+    document.getElementsByTagName("script")[0].before(tipButton)
   } else {
     input.classList.add("wrong")
-    tip.innerText = "Please enter correct price"
+    document.getElementsByTagName("script")[0].before(errorMessage)
   }
+})
 
-  console.log(typeof event.target.value)
+tipButton.addEventListener("click", event => {
+  event.currentTarget.remove()
+  tip.innerText = ""
 })
