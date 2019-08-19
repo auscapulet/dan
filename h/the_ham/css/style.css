@@ -307,9 +307,62 @@ body {
   padding: 20px 30px;
 }
 
-.work-item:hover {
-  color: #18cfab;
+.work-item-hover {
+  width: 285px;
+  height: 208px;
+  box-sizing: border-box;
   border-top: 3px solid #18cfab;
+  font-size: 14px;
+  padding-top: 45px;
+  padding-bottom: 50px;
+}
+
+.work-item-hover-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  margin-right: 5px;
+  border-radius: 50%;
+  border: 1px solid #18cfab;
+  position: relative;
+}
+
+.fa-link {
+  color: #18cfab;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.work-item-hover-search {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 1px solid #18cfab;
+  position: relative;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #18cfab;
+}
+
+.fa-search {
+  color: #fff;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.work-item-hover-text {
+  font-weight: 300;
+  color: #b6b8b8;
+}
+
+.pad-t30-b12 {
+  padding-top: 30px;
+  padding-bottom: 12px;
 }
 
 .active-work-button {

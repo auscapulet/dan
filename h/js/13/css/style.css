@@ -161,6 +161,10 @@
   text-align: center;
 }
 
+/* body {
+  color: orange;
+} */
+
 .clearfix::after {
   content: " ";
   display: block;

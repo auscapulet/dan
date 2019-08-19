@@ -77,7 +77,6 @@ activeWorkButton.classList.add(".active-work-button")
 
 amazingWorksButtonsContainer.onclick = event => {
   const workGalleryItems = document.querySelectorAll(".work-item-image")
-  console.log(workGalleryItems)
 
   hideButton(
     activeWorkButton,
@@ -106,10 +105,8 @@ amazingWorksButtonsContainer.onclick = event => {
 
 const loadImgButton = document.querySelector(".load-more")
 const imagesContainer = document.querySelector(".work-images-container")
-console.log(imagesContainer)
 
 loadImgButton.addEventListener("click", event => {
-  console.log("clicked")
   const extraImages = [
     { src: "img/work-extra-01.jpg", "data-img": "web design" },
     { src: "img/work-extra-02.jpeg", "data-img": "web design" },
@@ -151,4 +148,47 @@ loadImgButton.addEventListener("click", event => {
   loadImgButton.remove()
 
   // loadImgButton.style.display = "none"
+})
+
+// Work Item hover
+
+const workItemHover = document.createElement("div")
+
+workItemHover.classList.add("work-item-hover")
+workItemHover.insertAdjacentHTML(
+  "afterBegin",
+  '<div class="work-item-hover-icon"><i class="fas fa-link"></i></div>' +
+    '<div class="work-item-hover-search"><i class="fas fa-search"></i>' +
+    '</div><p class="green-text pad-t30-b12">CREATIVE DESIGN</p>' +
+    '<p class="work-item-hover-text"></p>'
+)
+
+let hoveredImg = null
+
+imagesContainer.addEventListener("mouseover", function(event) {
+  if (hoveredImg) {
+    return
+  }
+
+  hoveredImg = event.target
+
+  this.replaceChild(workItemHover, hoveredImg)
+  document.querySelector(
+    ".work-item-hover-text"
+  ).innerText = hoveredImg.getAttribute("data-img")
+})
+
+imagesContainer.addEventListener("mouseout", function(event) {
+  if (!hoveredImg) {
+    return
+  }
+
+  let relatedTarget = event.relatedTarget
+  if (
+    relatedTarget !== workItemHover &&
+    relatedTarget.parentNode !== workItemHover
+  ) {
+    this.replaceChild(hoveredImg, workItemHover)
+    hoveredImg = null
+  }
 })
