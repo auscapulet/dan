@@ -150,45 +150,124 @@ loadImgButton.addEventListener("click", event => {
   // loadImgButton.style.display = "none"
 })
 
-// Work Item hover
+// Carousel
 
-const workItemHover = document.createElement("div")
+//Helper Methods creation
 
-workItemHover.classList.add("work-item-hover")
-workItemHover.insertAdjacentHTML(
-  "afterBegin",
-  '<div class="work-item-hover-icon"><i class="fas fa-link"></i></div>' +
-    '<div class="work-item-hover-search"><i class="fas fa-search"></i>' +
-    '</div><p class="green-text pad-t30-b12">CREATIVE DESIGN</p>' +
-    '<p class="work-item-hover-text"></p>'
-)
+const carouselSelectedPhoto = document.querySelector(".testimonials-carousel")
+const testimonialsItem = document.querySelectorAll(".testimonial-container")
 
-let hoveredImg = null
+const carouselLeftButton = document.querySelector(".tetimonials-carousel-prev")
+const carouselRightButton = document.querySelector(".tetimonials-carousel-next")
 
-imagesContainer.addEventListener("mouseover", function(event) {
-  if (hoveredImg) {
-    return
-  }
+carouselLeftButton.style.display = "none"
 
-  hoveredImg = event.target
+let carouselActivePhoto = document.querySelector(".carousel-photo")
 
-  this.replaceChild(workItemHover, hoveredImg)
-  document.querySelector(
-    ".work-item-hover-text"
-  ).innerText = hoveredImg.getAttribute("data-img")
-})
+let carouselActiveComment = testimonialsItem[0]
 
-imagesContainer.addEventListener("mouseout", function(event) {
-  if (!hoveredImg) {
-    return
-  }
+carouselActivePhoto.classList.add("carousel-active-photo")
+carouselActiveComment.style.display = "block"
+carouselActiveComment.style.opacity = "1"
 
-  let relatedTarget = event.relatedTarget
+const hideCarouselComment = () => {
+  carouselActiveComment.style.display = "none"
+  carouselActiveComment.style.opacity = "0"
+}
+
+const showCarouselComment = () => {
+  testimonialsItem.forEach(elem => {
+    if (
+      elem.getAttribute("data-author") ===
+      carouselActivePhoto.getAttribute("data-author")
+    ) {
+      carouselActiveComment = elem
+    }
+  })
+
+  carouselActiveComment.style.display = "block"
+  let opacity = 0
+  let timerId = setInterval(() => {
+    opacity += 0.1
+    if (opacity > 0.9) {
+      Math.round(opacity)
+      clearInterval(timerId)
+    }
+    carouselActiveComment.style.opacity = `${opacity}`
+  }, 50)
+}
+
+const clickOnCarouselButtons = button => {
+  button.style.backgroundColor = "#18cfab"
+  button.style.borderColor = "#18cfab"
+  setTimeout(() => {
+    ;(button.style.backgroundColor = ""), (button.style.borderColor = "")
+  }, 200)
+}
+
+//excution
+
+carouselSelectedPhoto.onclick = event => {
   if (
-    relatedTarget !== workItemHover &&
-    relatedTarget.parentNode !== workItemHover
+    event.target.classList.contains("tetimonials-carousel-prev") &&
+    !carouselActivePhoto.previusElementSibling.classList.contains(
+      "tetimonials-carousel-prev"
+    )
   ) {
-    this.replaceChild(hoveredImg, workItemHover)
-    hoveredImg = null
+    carouselActivePhoto.classList.remove("carousel-active-photo")
+    hideCarouselComment()
+
+    carouselActivePhoto.previousElementSibling.classList.add(
+      "carousel-active-photo"
+    )
+    carouselActivePhoto = carouselActivePhoto.previousElementSibling
+    showCarouselComment()
   }
-})
+  clickOnCarouselButtons(event.target)
+
+  if (event.target.classList.contains("tetimonials-carousel-next")) {
+    if (
+      carouselActivePhoto.nextElementSibling &&
+      !carouselActivePhoto.nextElementSibling.classList.contains(
+        "tetimonials-carousel-next"
+      )
+    ) {
+      carouselActivePhoto.classList.remove("carousel-active-photo")
+      hideCarouselComment()
+
+      carouselActivePhoto.nextElementSibling.classList.add(
+        "carousel-active-photo"
+      )
+      carouselActivePhoto = carouselActivePhoto.nextElementSibling
+      showCarouselComment()
+    }
+    clickOnCarouselButtons(event.target)
+  }
+
+  if (event.target.classList.contains("carousel-photo")) {
+    carouselActivePhoto.classList.remove("carousel-active-photo")
+    hideCarouselComment()
+
+    event.target.classList.add("carousel-active-photo")
+    carouselActivePhoto = event.target
+    showCarouselComment()
+  }
+
+  if (
+    carouselActivePhoto.classList.contains("author-1") &&
+    carouselLeftButton.style.display !== "none"
+  ) {
+    carouselLeftButton.style.display = "none"
+  } else {
+    carouselLeftButton.style.display = " block"
+  }
+
+  if (
+    carouselActivePhoto.classList.contains("author-4") &&
+    carouselRightButton.style.display !== "none"
+  ) {
+    carouselRightButton.style.display = "none"
+  } else {
+    carouselRightButton.style.display = "block"
+  }
+}
