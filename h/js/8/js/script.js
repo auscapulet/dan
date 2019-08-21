@@ -46,4 +46,5 @@ input.addEventListener("focusout", event => {
 tipButton.addEventListener("click", event => {
   event.currentTarget.remove()
   tip.remove()
+  input.value = ""
 })

@@ -10,4 +10,4 @@ const createList = array => {
   document.querySelector("script").before(list)
 }
 
-createList()
+createList(array)
