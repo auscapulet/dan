@@ -1,16 +1,34 @@
-const iconEyeSlash = document.querySelector(".fa-eye-slash")
-const iconEye = document.querySelector(".fa-eye")
+const firstIcon = document.getElementById("firstIcon")
+const secondIcon = document.getElementById("secondIcon")
 const firstInput = document.querySelector(".first")
 const secondInput = document.querySelector(".second")
 const submitButton = document.querySelector(".btn")
 
-iconEyeSlash.addEventListener("click", event => {
-  console.log(firstInput.vale)
+// incons toggler
+
+firstIcon.addEventListener("click", function() {
+  if (firstInput.type === "password") {
+    firstIcon.classList.replace("fa-eye", "fa-eye-slash")
+    firstInput.type = "text"
+  } else {
+    firstInput.type === "password"
+    firstIcon.classList.replace("fa-eye-slash", "fa-eye")
+    firstInput.type = "password"
+  }
 })
 
-iconEye.addEventListener("click", event => {
-  console.log(secondInput.value)
+secondIcon.addEventListener("click", function() {
+  if (secondInput.type === "password") {
+    secondIcon.classList.replace("fa-eye", "fa-eye-slash")
+    secondInput.type = "text"
+  } else {
+    secondInput.type === "password"
+    secondIcon.classList.replace("fa-eye-slash", "fa-eye")
+    secondInput.type = "password"
+  }
 })
+
+// submit execution
 
 submitButton.addEventListener("click", event => {
   event.preventDefault()
@@ -26,5 +44,6 @@ const valuesChecker = () => {
     const errorMessage = document.createElement("p")
     errorMessage.style.color = "red"
     errorMessage.innerText = "Нужно ввести одинаковые значения"
+    secondInput.after(errorMessage)
   }
 }
