@@ -2,7 +2,7 @@ const themeChanger = document.querySelector(".theme-changer")
 const container = document.querySelector(".container")
 const items = document.querySelectorAll(".tour_title")
 
-themeChanger.addEventListener("click", () => {
+themeChanger.addEventListener("click", e => {
   if (localStorage.getItem("default") === "white") {
     localStorage.removeItem("default", "white")
     localStorage.setItem("new", "green")
@@ -18,7 +18,4 @@ themeChanger.addEventListener("click", () => {
       item.style.color = "#fff"
     })
   }
-
-  console.log(localStorage.getItem("default"))
-  console.log(localStorage.getItem("new"))
 })
