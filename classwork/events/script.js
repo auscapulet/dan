@@ -86,31 +86,49 @@ const btn = document.getElementById("active")
 // })
 
 //7 Randomiser
-container = document.createDocumentFragment()
+//
+// const input = document.createElement("input")
+// const preview = document.createElement("p")
 
-const textArea = document.createElement("textArea")
-const inputBtn = document.createElement("button")
-let words = []
+// 2
+// function cheatCode(magicWord, callBack) {
+//   let typedData = ""
+//   document.addEventListener("keyup", () => {
+//     for (let i = 0; i < magicWord.length; i++) {
+//       if (event.key === magicWord[i]) {
+//         typedData += event.key
+//         break
+//       }
+//     }
+//     if (typedData === magicWord) {
+//       callBack()
+//     }
+//     console.log(typedData)
+//   })
+// }
 
-inputBtn.innerText = "ok"
+// cheatCode("gogi", () => alert("it's someone"))
 
-inputBtn.addEventListener("click", () => {
-  const getWordButton =
-    document.createElement("button") || document.querySelector("#getRandomWrod")
-  getWordButton.innerText = getRandomWord
+//3
 
-  const randomWord =
-    document.createElement("p") || document.querySelector("#randomWord")
-  randomWord.id = "randomWord"
+// const searchInput = document.querySelector("#searchInput").value.toLowerCase()
+// const items = document.querySelectorAll("#myTable tr:nth-of-type(n+2)")
+// console.log(items)
 
-  inputBtn.after(getWordButton)
-  textArea.disabled = true
-})
+// searchInput.addEventListener("keyup", findItems())
 
-container.appendChild(textArea, inputBtn)
-document.querySelector("script").before(container)
+// function findItems() {
+//   items.forEach(tableRowItem => {
+//     tableRowItem.hidden = !tableRowItem.textContent
+//       .toLowerCase()
+//       .includes(searchInput)
 
-getWordButton.addEventListener("click", () => {
-  words = textArea.value.split(" ")
-  randomWord.innerText = words[Math.random() * words.length]
-})
+//     if (tableRowItem.textContent.includes(searchInput.value)) {
+//       tableRowItem.hidden = false
+//     } else {
+//       tableRowItem.hidden = true
+//     }
+//   })
+// }
+
+//4

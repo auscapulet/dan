@@ -21,3 +21,24 @@
   background-color: red;
   position: absolute;
 }
+
+.items-table {
+  width: 100%;
+  background-color: teal;
+  border-collapse: collapse;
+  border: 2px solid gray;
+  color: white;
+}
+.items-table th,
+td {
+  border: 2px solid lightgray;
+}
+.items-table tr {
+  line-height: 50px;
+}
+.col-name {
+  width: 70%;
+}
+.col-country {
+  width: 30%;
+}
