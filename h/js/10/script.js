@@ -6,7 +6,7 @@ const submitButton = document.querySelector(".btn")
 
 // incons toggler
 
-firstIcon.addEventListener("click", function() {
+firstIcon.addEventListener("click", event => {
   if (firstInput.type === "password") {
     firstIcon.classList.replace("fa-eye", "fa-eye-slash")
     firstInput.type = "text"
@@ -17,7 +17,7 @@ firstIcon.addEventListener("click", function() {
   }
 })
 
-secondIcon.addEventListener("click", function() {
+secondIcon.addEventListener("click", event => {
   if (secondInput.type === "password") {
     secondIcon.classList.replace("fa-eye", "fa-eye-slash")
     secondInput.type = "text"

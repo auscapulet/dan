@@ -1,16 +1,35 @@
-// 1 Опишите своими словами разницу между функциями setTimeout() и setInterval().
+const buttons = document.createElement("div")
+document.querySelector(".images-wrapper").after(buttons)
 
-//setTimeout - вызовет задержку один раз, setInterval будет выполнять программу с заддержкой постоянно.
+const stopBtn = document.createElement("button")
+stopBtn.innerText = "PAUSE CYCLE"
+buttons.appendChild(stopBtn)
 
-// 2 Что произойдет, если в функцию setTimeout() передать нулевую задержку? Сработает ли она мгновенно, и почему?
+const resumeBtn = document.createElement("button")
+resumeBtn.innerText = "RESUME CYCLE"
+stopBtn.after(resumeBtn)
 
-// Будет небольшая задержка, в смысле  очень маленькая, т.к. хоть значение и 0, де-факто это всеравно задержка, поэтому она будет.
+buttons.addEventListener("click", event => {
+  if (event.target === stopBtn) {
+    isPaused = true
+  } else if (event.target === resumeBtn) {
+    isPaused = false
+  }
+})
 
-//3 Почему важно не забывать вызывать функцию clearInterval(), когда ранее созданный цикл запуска вам уже не нужен?
-
-// Чтобы не занимал место в памяти, например. Ну или не шел бесконечнно
-
-cycledSlider()
-
-const stopButton = document.createElement("button")
-const repeatButton = document.createElement("button")
+let images = document.querySelectorAll(".images-wrapper .image-to-show")
+let i = 0
+let isPaused = false
+let slider = setInterval(() => {
+  if (!isPaused) {
+    images.forEach(el => {
+      el.setAttribute("hidden", "true")
+    })
+    images[i].removeAttribute("hidden")
+    if (i === images.length - 1) {
+      i = 0
+    } else {
+      i++
+    }
+  }
+}, 10000)
