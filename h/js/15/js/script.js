@@ -1,28 +1,31 @@
-$(document).scroll(function (e) {
-  const $screenHeight = $(window).innerHeight();
-  const $screenTop = $(window).scrollTop();
-
-  if($screenTop > $screenHeight){
-    if(!$('.scrol-top-btn').length) {
-      const $scrolTopBtn = $('<button hidden class="scrol-top-btn"></button>');
-
-      $('script:first').before($scrolTopBtn);
-      // $scrolTopBtn.fadeIn();
-
-      $scrolTopBtn.click(() => {
-        $('body, html').animate({
-          scrollTop: 0
-        }, 1000);
-      });
-       console.log($scrollTopBtn);
-    }
-  } else {
-    $('.scrol-top-btn').fadeOut(500, () => {
-      $('.scrol-top-btn').remove();
+//Anchors smooth scrolling
+$(document).ready(function(){
+    $(".nav-item").on('click', function(event) {
+        $('html').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 800)
     });
-    // $('.scrol-top-btn').fadeOut();
-    // $('.scrol-top-btn').remove();
-    
-  }
- 
+});
+
+// scroll to top button
+
+const $btn = $('.btn-to-top');
+
+$(document).scroll(function() {
+
+    let $heightClient = $(window).innerHeight();
+
+    ($(window).scrollTop() > $heightClient) ? $('.btn-to-top').fadeIn('slow'): $('.btn-to-top').fadeOut('slow');
+});
+
+$btn.click(function() {
+    $('html').animate({scrollTop: 0}, 800)
+});
+
+// section visibility toggler
+
+$(".btn-toggle-top-rated").html("Toggle this");
+const btnToggleTopRated = document.querySelector(".btn-toggle-top-rated");
+$(".btn-toggle-top-rated").click(function() {
+    $("#top-rated").slideToggle("slow");
 });
