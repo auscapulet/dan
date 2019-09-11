@@ -1,0 +1,167 @@
+.navigation {
+  width: 320px;
+  background-color: #373c3f;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 4px;
+}
+
+.navigation__title {
+  font-size: 12px;
+  color: #fff;
+  padding-top: 13px;
+  margin: 0px 0px 12px 40px;
+}
+
+.fa-bars {
+  color: #fff;
+  background-color: #202529;
+  width: 41px;
+  display: inline-block;
+  margin-left: 239px;
+}
+
+.navigation__container {
+  height: 173px;
+  width: 320px;
+  background: url("../images/pizza.png") no-repeat center;
+}
+
+.navigation__text {
+  color: #fff;
+  font-size: 16px;
+  margin: 0px 0px 11px 20px;
+  padding-top: 19px;
+}
+
+.navigation__text-link {
+  color: #93bdc5;
+  margin-left: 20px;
+}
+
+.navigation__items {
+  height: 182px;
+  width: 161px;
+  display: none;
+}
+
+.navigation__item {
+  background-color: white;
+}
+
+.selected {
+  background-color: #f5f5f5;
+}
+
+.buttons-bar {
+  width: 320px;
+  font-family: "Lato", sans-serif;
+}
+
+.buttons-bar__delivery {
+  background: url("../images/delivery.png") fixed;
+  background-position: -30px  10px;
+}
+
+.buttons-bar__salads {
+  background: url("../images/salads.png") fixed;
+  background-position: left 125px;
+}
+
+.buttons-bar__desserts {
+  background: url("../images/desserts.png") fixed;
+  background-position: left 125px;
+}
+
+.buttons-bar__title {
+  width: 249px;
+  height: 76px;
+  text-align: center;
+  margin-bottom: 1px;
+  color: #fff;
+}
+
+.buttons-bar__action {
+  display: inline-block;
+  align-items: center;
+  width: 71px;
+  padding: 30px 0;
+  background-color: #a5cea6;
+  color: #fff;
+}
+
+.some-text {
+  font-size: 18px;
+  margin-left: 9px;
+  margin-top: 25px;
+  margin-bottom: 4px;
+}
+
+.some-sub-text {
+  text-align: center;
+  font-size: 14px;
+  color: #e7e7e8;
+  margin-bottom: 10px;
+  margin-left: 9px;
+  text-align: left;
+}
+
+.menu {
+  width: 320px;
+  font-family: "Lato", sans-serif;
+}
+
+.menu__title-dark {
+  padding: 12px 0;
+  padding-left: 16px;
+  background-color: #3f4043;
+  color: #a5cea6;
+  font-size: 16px;
+}
+
+.menu__subtitle {
+  margin: 19px 20px 20px 14px;
+}
+
+.menu__item--title {
+  font-size: 16px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.menu__item-price {
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.menu__item-description {
+  font-size: 11px;
+  text-align: justify;
+}
+
+.menu__cup--icon {
+  background-image: url("../images/cup.png");
+  background-repeat: no-repeat;
+  background-position: left 20px bottom 13px;
+}
+
+.menu__title-light {
+  padding: 12px 0;
+  padding-left: 16px;
+  background-color: #a5cea6;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 29px;
+}
+
+.footer__text {
+  width: 320px;
+  font-family: "Lato", sans-serif;
+  padding: 12px 0;
+  margin-top: 48px;
+  text-align: center;
+  background-color: #a5cea6;
+  color: #fff;
+  font-size: 15px;
+}
