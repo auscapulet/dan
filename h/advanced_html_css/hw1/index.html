@@ -8,18 +8,19 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <title>Pizza</title>
 </head>
+
 <body>
   <header>
     <nav class="navigation">
       <div class="header__container">
-          <p class="navigation__title">Navigation</p><i class="fas fa-bars"></i>
+          <p class="navigation__title">Navigation</p><i class="fas fa-bars fa-sm"></i></i>
       </div>
       
       <div class="navigation__container">
-        <p class="navigation__text">All we need is Love.</p>
-        <p class="navigation__text">And pizza. Pizza is good</p>
+        <p class="navigation__text">All we need is Love.<br/>And pizza. Pizza is good </p>
         <a href="#" class="navigation__text-link">www.new-pizza.com</a>
       </div>
 
@@ -34,12 +35,18 @@
   </header>
 
   <section class="buttons-bar">
-    <p class="buttons-bar__title buttons-bar__delivery">Pizza Delivery</p>
-    <button class="buttons-bar__action"><a href="#"></a>></button>
-    <p class="buttons-bar__title buttons-bar__salads">UA/UX Salads</p>
-    <button class="buttons-bar__action"><a href="#"></a> ></button>
-    <p class="buttons-bar__title buttons-bar__desserts">Desserts</p>
-    <button class="buttons-bar__action"><a href="#"></a> ></button>
+      <a href="#" class="buttons-bar__container">
+        <p class="buttons-bar__title buttons-bar__delivery">Pizza Delivery</p>
+        <button class="buttons-bar__action"><i class="buttons-bar--arrow-icon"></i></button>
+      </a> 
+      <a href="#" class="buttons-bar__container">
+        <p class="buttons-bar__title buttons-bar__salads">UA/UX Salads</p>
+        <button class="buttons-bar__action"><i class="buttons-bar--arrow-icon"></i></button>
+      </a> 
+      <a href="#" class="buttons-bar__container">
+        <p class="buttons-bar__title buttons-bar__desserts">Desserts</p>
+        <button class="buttons-bar__action"><i class="buttons-bar--arrow-icon"></i></button>
+      </a>
   </section>
   
   <section class="pre-menu">
@@ -53,72 +60,64 @@
       <h4 class="menu__subtitle">ID HENDRERIT VELT QUIS</h4>
       <i class="fas fa-stroopwafel fa-lg"></i> 
     </div>
-   
-    <li class="menu__item"><span class="menu__item--title">Lass aptent taciti</span> <span class="menu__item-price">$1200</span></li>
-    <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
-
-    <li class="menu__item"><span class="menu__item--title">Nec fermentum nibh</span> <span class="menu__item-price">$1200</span></li>
-    <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
-    <li class="menu__item"><span class="menu__item--title">Eu dolor accumsan pharetra</span><span class="menu__item-price">$1200</span></li>
-    <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
-    <li class="menu__item"><span class="menu__item--title">Non duis dictum eros nec</span><span class="menu__item-price">$1200</span></li>
-    <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
-
+    <ul> 
+      <li class="menu__item"><span class="menu__item--title">Lass aptent taciti</span> <span class="menu__item-price">$1200</span></li>
+      <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
+      <li class="menu__item"><span class="menu__item--title">Nec fermentum nibh</span> <span class="menu__item-price">$1200</span></li>
+      <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
+      <li class="menu__item"><span class="menu__item--title">Eu dolor accumsan pharetra</span><span class="menu__item-price">$1200</span></li>
+      <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
+      <li class="menu__item"><span class="menu__item--title">Non duis dictum eros nec</span><span class="menu__item-price">$1200</span></li>
+      <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
+    </ul>
+    
     <div class="menu__subtitle-container">
       <h4 class="menu__subtitle">ID DOLOR PELLENTESQUE  </h4>
       <i class="fas fa-wine-glass-alt fa-lg"></i>
     </div>
    
-    <li class="menu__item">
-      <p class="menu__item--title">Lass aptent taciti <span class="menu__item-price">$1200</span></p>
+    <ul>
+      <li class="menu__item"><span class="menu__item--title">Lass aptent taciti</span> <span class="menu__item-price">$1200</span></li>
       <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
-    </li>
-    <li class="menu__item">
-      <p class="menu__item--title">Nec fermentum nibh<span class="menu__item-price">$1200</span></p>
-      <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
-    </li>
-
+      <li class="menu__item"><span class="menu__item--title">Nec fermentum nibh</span> <span class="menu__item-price">$1200</span></li>
+      <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>  
+    </ul>
+    
     <h3 class="menu__title-light">VESTIBULUM AUGUE ET</h3>
     <div class="menu__subtitle-container">
       <h4 class="menu__subtitle">AUGUE PROIN ELEIFEND </h4>
       <i class="fas fa-coffee fa-lg"></i>
     </div>
     
-    <li class="menu__item">
-      <p class="menu__item--title">Lass aptent taciti <span class="menu__item-price">$1200</span></p>
+    <ul>
+      <li class="menu__item"><span class="menu__item--title">Lass aptent taciti </span><span class="menu__item-price">$1200</span></li>
       <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
-    </li>
-    <li class="menu__item">
-      <p class="menu__item--title">Nec fermentum nibh<span class="menu__item-price">$1200</span></p>
+      <li class="menu__item"><span class="menu__item--title">Nec fermentum nibh</span><span class="menu__item-price">$1200</span></li>
+      <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p> 
+      <li class="menu__item"><span class="menu__item--title">Eu dolor accumsan pharetra</span><span class="menu__item-price">$1200</span></li>
       <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
-    </li>
-    <li class="menu__item">
-      <p class="menu__item--title">Eu dolor accumsan pharetra<span class="menu__item-price">$1200</span></p>
-      <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
-    </li>
-    <li class="menu__item">
-      <p class="menu__item--title">Non duis dictum eros nec<span class="menu__item-price">$1200</span></p>
-      <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
-    </li>
-
+      <li class="menu__item"><span class="menu__item--title">Non duis dictum eros nec</span><span class="menu__item-price">$1200</span></li>
+      <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>   
+    </ul>
+    
     <div class="menu__subtitle-container">
       <h4 class="menu__subtitle">PHARETRA AT SIT AMET SEM</h4>
       <i class="fas fa-beer fa-lg"></i>
     </div>
     
-    <li class="menu__item">
-      <p class="menu__item--title">Lass aptent taciti <span class="menu__item-price">$1200</span></p>
+    <ul>
+      <li class="menu__item"><span class="menu__item--title">Lass aptent taciti </span><span class="menu__item-price">$1200</span></li>
       <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
-    </li>
-    <li class="menu__item">
-      <p class="menu__item--title">Nec fermentum nibh<span class="menu__item-price">$1200</span></p>
+      <li class="menu__item"><span class="menu__item--title">Nec fermentum nibh</span><span class="menu__item-price">$1200</span></li>
       <p class="menu__item-description">Praesent hendrerit massa ut libero bibendum pulvinar. Pellenteue eget tortor dolor. Nam quis nunc et eros mollis facilisis. </p>
-    </li>
-
+    </ul>
+   
+    
   </section>
 
-  <footer>
-    <p class="footer__text">Best pizza from 2018 year. New UA/UX salads - not boring, only fun.  </p>
+  <footer class="footer">
+    <span class="footer__text">Best pizza from 2018 year.<span class="footer__text">New UA/UX salads - not boring, only fun.</span> </span> 
+    
   </footer>
 </body>
 </html>

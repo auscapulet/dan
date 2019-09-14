@@ -15,14 +15,14 @@
 .navigation__title {
   font-size: 14px;
   color: $white;
-  padding-top: 13px;
-  margin: 0px 0px 12px 19px;
+  padding-top: 10px;
+  margin: 0px 0px 13px 14px;
 }
 
 .fa-bars {
   color: $white;
   background-color: #202529;
-  margin-left: 195px;
+  margin-left: 198px;
   width: 41px;
   text-align: center;
   vertical-align: 50%;
@@ -30,15 +30,20 @@
   cursor: pointer;
 }
 
+.fa-times {
+  visibility: hidden;
+}
+
 .navigation__container {
   height: 173px;
   width: $mobileS;
-  background: url("../images/pizza.png") no-repeat center;
+  background: url("../images/320/header_bg_320.png") no-repeat center;
 }
 
 .navigation__text {
   color: $white;
   font-size: 16px;
+  font-weight: 700;
   margin: 0px 0px 11px 20px;
   padding-top: 19px;
 }
@@ -46,6 +51,7 @@
 .navigation__text-link {
   color: #93bdc5;
   margin-left: 20px;
+  font-size: 14px;
 }
 
 .navigation__items {
@@ -65,23 +71,23 @@
 .buttons-bar {
   width: $mobileS;
   font-family: $Lato;
-  display: grid;
-  grid-template-columns: 249px 71px;
 }
 
 .buttons-bar__delivery {
-  background: url('../images/delivery.png');
-  background-position: bottom;
+  background: url('../images/320/pizza_delivery_bg_320.png');
 }
 
 .buttons-bar__salads {
-  background: url('../images/salads.png');
-  background-position:  bottom;
+  background: url('../images/320/ua_ux_salads_bg_320.png');
 }
 
 .buttons-bar__desserts {
-  background: url('../images/desserts.png') ;
-  background-position: center;
+  background: url('../images/320/desserts_bg_320.png') ;
+}
+
+.buttons-bar__container {
+  display: grid;
+  grid-template-columns: 249px 71px;
 }
 
 .buttons-bar__title {
@@ -92,7 +98,7 @@
   text-align: center;
   margin-bottom: 1px;
   color: $white;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -109,29 +115,46 @@
   height: 75px;
 }
 
+.buttons-bar--arrow-icon {
+  position: relative;
+}
+
+.buttons-bar__action ::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5px;
+  right: 2px;
+  border-top: 2px solid $white;
+  border-right: 2px solid $white;
+  height: 5px;
+  width: 5px;
+  transform: rotate(45deg);
+}
+
 .pre-menu {
   font-family: $Lato;
 }
 
 .pre-menu__text {
-  font-size: 18px;
-  margin-left: 9px;
-  margin-top: 25px;
-  margin-bottom: 4px
+  font-size: 20px;
+  margin-left: 8px;
+  margin-top: 22px;
+  margin-bottom: 2px
 }
 
 .pre-menu__sub-text {
   text-align: center;
-  font-size: 14px;
+  font-size: 10px;
   color: #e7e7e8;
   margin-bottom: 10px;
-  margin-left: 9px;
+  margin-left: 8px;
   text-align: left;
 }
 
 .menu__subtitle-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .menu {
@@ -140,48 +163,65 @@
 }
 
 .menu__title-dark {
-  padding: 12px 0;
-  padding-left: 16px;
+  padding: 9.5px 0px 9px 16.5px;
   background-color: #3f4043;
   color: $green;
-  font-size: 16px;
+  font-size: 19px;
+  letter-spacing: 0.8px;
+  // line-height: 32px;
+  // height: 37px;
 }
 
 .menu__subtitle {
-  margin: 19px 20px 0px 14px;
+  margin: 16px 20px 0px 14px;
   width: 240px;
+  font-weight: 400;
 }
 
 .fa-lg {
-  margin-top: 19px;
-  margin-right: 18px;
+  margin-top: 16px;
+  margin-right: 20px;
 }
 
 .menu__item {
- position: relative;
-  // justify-content: space-between;
-  margin-top: 11px;
+//  position: relative;
+  display: flex;
+  justify-content: space-between;
+  // margin-top: 11px;
+}
+
+.menu__item--title::before {
+  content: ".";
+  // position: absolute;
+  // top: 5px;
+  margin-right: 5px;
+  vertical-align: 5px;
+  
+  color: 10px solid black;
 }
 
 .menu__item--title {
-  font-size: 16px;
-  margin-bottom: 8px;
-  // margin-left: 15px;
+  font-size: 14px;
+  margin-bottom: 2px;
+  margin-left: 15px;
 }
 
 .menu__item-price {
   display: inline-block;
   align-items: right ;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
+  margin-right: 17px;
+  margin-top: 5px;
 }
 
 .menu__item-description {
-  font-size: 10px;
+  font-size: 9px;
   text-align: justify;
-  margin-left: 8px;
+  margin-left: 16px;
   margin-top: 7px;
-  margin-bottom: 11px;
+  margin-bottom: 5px;
+  margin-right: 17px;
 }
 
 .fa-lg {
@@ -197,13 +237,22 @@
   margin-top: 29px;
 }
 
-.footer__text {
+.footer {
   width: $mobileS;
-  font-family: $Lato;
-  padding: 12px 0;
-  margin-top: 48px;
+  margin-top: 49px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  background-color: $green; 
+}
+
+.footer__text {
   text-align: center;
-  background-color: $green;
+  line-height: 18px;
+  font-family: $Montserrat;
   color: $white;
-  font-size: 15px;
+  font-size: 12px;
+  display: block;
 }
