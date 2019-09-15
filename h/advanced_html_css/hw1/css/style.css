@@ -19,6 +19,7 @@
     height: 346px;
     width: 640px;
     background: url("../images/640/header_bg_640.png") no-repeat center;
+    margin-bottom: 5px;
   }
   .navigation__text {
     font-size: 32px;
@@ -82,7 +83,7 @@
     margin-left: 17px;
   }
   .menu__subtitle-container {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
   .menu {
     width: 640px;
@@ -100,13 +101,14 @@
     font-size: 30px;
     font-weight: 400;
   }
-  .fa-lg,
-  .fa-sm {
+  .menu__small-icon {
     display: none;
   }
-  .fa-3x {
+  .menu__large-icon {
+    display: block;
     margin-top: 28px;
     margin-right: 42px;
+    color: #a5cea6;
   }
   .menu__item--title::before {
     content: "";
@@ -116,6 +118,7 @@
     background-color: black;
     border-radius: 50%;
     display: inline-block;
+    vertical-align: 30%;
   }
   .menu__item--title {
     font-size: 28px;
@@ -125,12 +128,12 @@
   .menu__item-price {
     font-size: 28px;
     margin-right: 34px;
-    margin-top: 10px;
+    margin-top: 0px;
   }
   .menu__item-description {
     font-size: 18px;
     margin-left: 32px;
-    margin-top: 16px;
+    margin-top: 15px;
     margin-bottom: 10px;
     margin-right: 34px;
   }
@@ -157,7 +160,6 @@
   width: 320px;
   background-color: #373c3f;
   font-family: "Lato", sans-serif;
-  margin-bottom: 4px;
 }
 
 .header__container {
@@ -325,13 +327,23 @@
 
 .menu__subtitle {
   margin: 16px 20px 0px 14px;
-  width: 240px;
+  width: 270px;
   font-weight: 400;
+  font-size: 18px;
 }
 
-.fa-lg {
+.large {
+  display: none;
+}
+
+.menu__large-icon {
+  display: none;
+}
+
+.menu__small-icon {
   margin-top: 16px;
   margin-right: 20px;
+  display: block;
 }
 
 .menu__item {
@@ -340,16 +352,20 @@
 }
 
 .menu__item--title::before {
-  content: ".";
-  margin-right: 5px;
-  vertical-align: 5px;
-  color: 10px solid black;
+  content: "";
+  margin-right: 8px;
+  vertical-align: 2px;
+  height: 3px;
+  width: 3px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .menu__item--title {
   font-size: 14px;
-  margin-bottom: 2px;
   margin-left: 15px;
+  margin-top: 5px;
 }
 
 .menu__item-price {
@@ -375,7 +391,7 @@
 }
 
 .menu__title-light {
-  margin-top: 29px;
+  margin-top: 35px;
   padding: 9.5px 0px 9px 16.5px;
   background-color: #a5cea6;
   color: #fff;

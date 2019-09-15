@@ -7,6 +7,7 @@
 
   .header__container {
     height: 74px;
+    
   }
 
   .navigation__title {
@@ -25,6 +26,7 @@
     height: 346px;
     width: $mobileM;
     background: url("../images/640/header_bg_640.png") no-repeat center;
+    margin-bottom: 5px;
   }
 
   .navigation__text {
@@ -101,7 +103,7 @@
   }
 
   .menu__subtitle-container {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   .menu {
@@ -123,14 +125,16 @@
     font-weight: 400;
   }
 
-  .fa-lg,
-  .fa-sm {
+ 
+  .menu__small-icon  {
     display: none
   }
 
-  .fa-3x {
+  .menu__large-icon {
+    display: block;
     margin-top: 28px;
     margin-right: 42px;
+    color: $green;
   }
 
   .menu__item--title::before {
@@ -141,6 +145,7 @@
     background-color: black;
     border-radius: 50%;
     display: inline-block;
+    vertical-align: 30%;
   }
 
   .menu__item--title {
@@ -152,13 +157,13 @@
   .menu__item-price {
     font-size: 28px;
     margin-right: 34px;
-    margin-top: 10px;
+    margin-top: 0px;
   }
 
   .menu__item-description {
     font-size: 18px;
     margin-left: 32px;
-    margin-top: 16px;
+    margin-top: 15px;
     margin-bottom: 10px;
     margin-right: 34px;
   }

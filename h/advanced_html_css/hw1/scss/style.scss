@@ -5,12 +5,13 @@
   width: $mobileS;
   background-color: #373c3f;
   font-family: $Lato;
-  margin-bottom: 4px;
+  // margin-bottom: 4px;
 }
 
 .header__container {
   display: flex;
   height: 37px;
+  
 }
 
 .navigation__title {
@@ -175,13 +176,22 @@
 
 .menu__subtitle {
   margin: 16px 20px 0px 14px;
-  width: 240px;
+  width: 270px;
   font-weight: 400;
+  font-size: 18px;
 }
 
-.fa-lg {
+.large {
+  display: none;
+}
+.menu__large-icon {
+  display: none;
+}
+
+.menu__small-icon {
   margin-top: 16px;
   margin-right: 20px;
+  display: block;
 }
 
 .menu__item {
@@ -192,19 +202,23 @@
 }
 
 .menu__item--title::before {
-  content: ".";
+  content: "";
   // position: absolute;
   // top: 5px;
-  margin-right: 5px;
-  vertical-align: 5px;
-  
-  color: 10px solid black;
+  margin-right: 8px;
+  vertical-align: 2px;
+  height: 3px;
+  width: 3px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .menu__item--title {
   font-size: 14px;
-  margin-bottom: 2px;
+  // margin-bottom: 2px;
   margin-left: 15px;
+  margin-top: 5px;
 }
 
 .menu__item-price {
@@ -230,7 +244,7 @@
 }
 
 .menu__title-light {
-  margin-top: 29px;
+  margin-top: 35px;
   padding: 9.5px 0px 9px 16.5px;
   background-color: $green;
   color: $white;
