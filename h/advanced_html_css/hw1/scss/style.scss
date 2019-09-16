@@ -1,5 +1,7 @@
 @import "_vars.scss";
 @import "640.scss";
+@import "980.scss";
+@import "1200.scss";
 
 .navigation {
   width: $mobileS;
@@ -59,6 +61,10 @@
 .navigation__items {
   height: 182px;
   width: 161px;
+  display: none;
+}
+
+.navigation__logo{
   display: none;
 }
 
@@ -135,12 +141,23 @@
 
 .pre-menu {
   font-family: $Lato;
+  width: $mobileS;
+  display: block;
+}
+
+.pre-menu__logo-container,
+.pre-menu-logo {
+  display: none;
+}
+
+.pre-menu__text-container {
+  margin-top: 22px;
+  margin-bottom: 20px;
 }
 
 .pre-menu__text {
   font-size: 20px;
   margin-left: 8px;
-  margin-top: 22px;
   margin-bottom: 2px
 }
 
@@ -148,7 +165,6 @@
   text-align: center;
   font-size: 10px;
   color: #e7e7e8;
-  margin-bottom: 10px;
   margin-left: 8px;
   text-align: left;
 }
@@ -261,6 +277,10 @@
   align-items: center;
   height: 55px;
   background-color: $green; 
+}
+
+.footer__logo {
+  display: none;
 }
 
 .footer__text {
