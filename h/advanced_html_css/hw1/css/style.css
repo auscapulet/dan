@@ -175,7 +175,6 @@
 @media screen and (min-width: 980px) {
   .navigation {
     width: 980px;
-    font-family: "Lato", sans-serif;
   }
   .header__container {
     height: 97px;
@@ -203,6 +202,7 @@
     color: #fff;
     font-size: 15px;
     font-weight: 400;
+    text-transform: uppercase;
   }
   .navigation__title,
   .navigation__icons-container,
@@ -212,6 +212,7 @@
   .navigation__container {
     height: 530px;
     width: 980px;
+    font-family: "Lato", sans-serif;
     background: url("../images/980/header_bg_980.png") no-repeat center;
   }
   .navigation__text {
@@ -262,8 +263,9 @@
   }
   .pre-menu__text-container {
     display: block;
-    margin-top: 72px;
+    margin-top: 68px;
     margin-bottom: 21px;
+    margin-left: 10px;
   }
   .pre-menu__logo-container {
     margin-right: 29px;
@@ -287,7 +289,6 @@
   }
   .menu__title-dark {
     padding: 27px 0px 23px 18px;
-    font-size: 24px;
     letter-spacing: 0.8px;
     width: 475px;
     font-size: 32px;
@@ -298,10 +299,10 @@
     width: 480px;
   }
   .menu__subtitle {
-    margin: 30px 19px 0px 19px;
-    width: 350px;
+    margin: 30px 0px 0px 19px;
+    width: 390px;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 24px;
   }
   .small {
     display: none;
@@ -319,23 +320,22 @@
   }
   .menu__item-price {
     font-size: 24px;
-    margin-right: 0px;
+    margin-right: 17px;
     margin-top: 0px;
   }
   .menu__item-description {
     font-size: 16px;
     text-align: justify;
     margin-left: 23px;
-    margin-top: 17px;
-    margin-bottom: 28px;
-    margin-right: 0px;
+    margin-top: 12px;
+    margin-bottom: 22px;
+    margin-right: 17px;
   }
   .menu__title-light {
     margin-top: 0px;
     padding: 27px 0px 23px 18px;
-    font-size: 24px;
     letter-spacing: 0.8px;
-    width: 469px;
+    width: 464px;
     font-size: 32px;
   }
   .footer {
@@ -358,6 +358,145 @@
     font-size: 18px;
     display: inline-block;
     margin-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navigation {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .header__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .navigation__items {
+    width: 600px;
+    height: 11px;
+    margin-left: 32px;
+    padding-top: 39px;
+    padding-bottom: 46px;
+  }
+  .navigation__logo {
+    margin-right: 38px;
+    margin-left: 0px;
+  }
+  .navigation__text {
+    font-size: 60px;
+    margin: 0px 0px 52px 35px;
+    padding-top: 50px;
+  }
+  .navigation__text-link {
+    margin-left: 35px;
+    font-size: 40px;
+  }
+  .navigation__container {
+    height: 649px;
+    width: 100%;
+    background: url("../images/1200/header_bg_1200.png");
+    background-position: center;
+    background-size: cover;
+  }
+  .buttons-bar {
+    width: 100%;
+    justify-content: stretch;
+  }
+  .buttons-bar__container {
+    width: 100%;
+  }
+  .buttons-bar__title {
+    padding-top: 176px;
+    padding-bottom: 184px;
+    font-size: 41px;
+    width: 100%;
+  }
+  .buttons-bar__delivery {
+    background: url("../images/1200/pizza_delivery_bg_1200.png");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .buttons-bar__salads {
+    background: url("../images/1200/ua_ux_salads_bg_1200.png");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .buttons-bar__desserts {
+    background: url("../images/1200/desserts_bg_1200.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .pre-menu {
+    width: 100%;
+  }
+  .pre-menu__text-container {
+    margin-left: 0px;
+  }
+  .pre-menu__logo-container {
+    margin-left: 0px;
+    margin-bottom: 15px;
+    margin-top: 45px;
+  }
+  .pre-menu__text {
+    margin-left: 20px;
+    margin-bottom: 7px;
+    font-size: 38px;
+  }
+  .pre-menu__sub-text {
+    margin-left: 22px;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .menu__title-dark {
+    padding: 20px 0px 23px 14px;
+    width: 100%;
+    font-size: 38px;
+  }
+  .menu__title-light {
+    padding: 20px 0px 23px 14px;
+    width: 100%;
+    font-size: 38px;
+  }
+  .menu__subtitle-container {
+    margin-bottom: 30px;
+    margin-right: 0px;
+    width: 100%;
+  }
+  .menu__subtitle {
+    font-size: 30px;
+    width: 440px;
+  }
+  .menu__large-icon {
+    margin-right: 17px;
+  }
+  .menu__item-price {
+    font-size: 26px;
+    margin-right: 17px;
+    margin-top: 0px;
+  }
+  .menu__item-description {
+    font-size: 16px;
+    text-align: justify;
+    margin-left: 19px;
+    margin-top: 17px;
+    margin-bottom: 22px;
+    margin-right: 17px;
+  }
+  .footer {
+    width: 100%;
+    padding: 22px 0px;
+    margin-top: 100px;
+  }
+  .footer__logo {
+    margin-left: 37px;
+  }
+  .footer__text {
+    margin-right: 19px;
   }
 }
 

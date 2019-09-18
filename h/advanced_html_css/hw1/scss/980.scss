@@ -3,7 +3,6 @@
 @media screen and (min-width: 980px) {
   .navigation {
     width: $tablet;
-    font-family: $Lato;
   }
 
   .header__container {
@@ -35,6 +34,7 @@
     color: $white;
     font-size: 15px;
     font-weight: 400;
+    text-transform: uppercase;
     // margin-right: 30px;
   }
 
@@ -47,6 +47,7 @@
   .navigation__container {
     height: 530px;
     width: $tablet;
+    font-family: $Lato;
     background: url("../images/980/header_bg_980.png") no-repeat center;
   }
 
@@ -104,6 +105,7 @@
   .buttons-bar__desserts {
     background: url('../images/980/desserts_bg_980.png') ;
   }
+
   .pre-menu {
     width: $tablet;
     display: flex;
@@ -112,8 +114,9 @@
 
   .pre-menu__text-container {
     display: block;
-    margin-top: 72px;
+    margin-top: 68px;
     margin-bottom: 21px;
+    margin-left: 10px;
   }
 
   .pre-menu__logo-container {
@@ -143,7 +146,6 @@
 
   .menu__title-dark {
     padding: 27px 0px 23px 18px;
-    font-size: 24px;
     letter-spacing: 0.8px;
     width: 475px;
     font-size: 32px;
@@ -158,10 +160,10 @@
   }
 
   .menu__subtitle {
-    margin: 30px 19px 0px 19px;
-    width: 350px;
+    margin: 30px 0px 0px 19px;
+    width: 390px;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .small {
@@ -184,7 +186,7 @@
 
   .menu__item-price {
     font-size: 24px;
-    margin-right: 0px;
+    margin-right: 17px;
     margin-top: 0px;
   }
 
@@ -192,17 +194,16 @@
     font-size: 16px;
     text-align: justify;
     margin-left: 23px;
-    margin-top: 17px;
-    margin-bottom: 28px;
-    margin-right: 0px;
+    margin-top: 12px;
+    margin-bottom: 22px;
+    margin-right: 17px;
   }
 
   .menu__title-light {
     margin-top: 0px;
     padding: 27px 0px 23px 18px;
-    font-size: 24px;
     letter-spacing: 0.8px;
-    width: 469px;
+    width: 464px;
     font-size: 32px;
   }
 
