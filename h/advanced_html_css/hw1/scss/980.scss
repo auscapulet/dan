@@ -14,17 +14,27 @@
     flex-direction: row;
     justify-content: space-between;
     background-color: #373c3f;
-    width: 600px;
+    width: 680px;
     height: 11px;
     margin-left: 30px; 
     padding: 43px 0;
     font-family: $Montserrat;
     cursor: pointer;
+    top: 0px;
+    right: 0px;
+  }
+
+  .navigation__item:nth-child(even)  {
+    background-color: #373c3f;
+  }
+
+  .navigation__items-hidden{
+    visibility: visible;
   }
 
   .navigation__logo{
     display: block;
-    margin-left: 216px;
+    margin-left: 136px;
     height: 85px;
     margin-top: 6px
   }
