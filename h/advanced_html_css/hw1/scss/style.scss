@@ -19,25 +19,25 @@
 .navigation__title {
   font-size: 14px;
   color: $white;
-  padding-top: 10px;
-  margin: 0px 0px 13px 14px;
+  padding-top: 8px;
+  margin: 0px 0px 13px 17px;
 }
 
 .fa-bars {
   color: $white;
   background-color: #202529;
-  margin-left: 198px;
+  margin-left: 194px;
   width: 41px;
   text-align: center;
   vertical-align: 50%;
   padding-top: 10px;
   cursor: pointer;
-  height: 28px;
+  height: 27px;
 }
 
 .fa-times {
   color: $white;
-  margin-left: 198px;
+  margin-left: 194px;
   width: 41px;
   padding-top: 10px;
   cursor: pointer;
@@ -58,6 +58,7 @@
 .navigation__container {
   height: 173px;
   width: $mobileS;
+  font-family: $Lato;
   background: url("../images/320/header_bg_320.png") no-repeat center;
 }
 
@@ -65,8 +66,9 @@
   color: $white;
   font-size: 16px;
   font-weight: 700;
-  margin: 0px 0px 11px 20px;
-  padding-top: 19px;
+  margin: 0px 0px 6px 20px;
+  padding-top: 13px;
+  line-height: 22px;
 }
 
 .navigation__text-link {
@@ -77,12 +79,11 @@
 
 .navigation__items {
   height: 161px;
-  width: 171px;
   display: block;
   z-index: 100;
   position: relative;
   right: 182px;
-  top: 40px;
+  top: 37px;
 }
 
 .navigation__item:nth-child(even)  {
@@ -95,12 +96,13 @@
 
 .navigation__item {
   background-color: $white;
-  width: 171px;
+  width: 170px;
   font-size: 12px;
-  padding-top: 10px;
+  padding-top: 9px;
   padding-bottom: 0px;
-  padding-left: 11px;
+  padding-left: 12px;
   height: 22px;
+  cursor: pointer;
 }
 
 .selected {
@@ -182,22 +184,23 @@
 }
 
 .pre-menu__text-container {
-  margin-top: 22px;
-  margin-bottom: 20px;
+  margin-top: 24px;
+  margin-bottom: 12px;
 }
 
 .pre-menu__text {
   font-size: 20px;
-  margin-left: 8px;
-  margin-bottom: 2px
+  margin-left: 6px;
 }
 
 .pre-menu__sub-text {
-  text-align: center;
+ 
   font-size: 10px;
   color: #e7e7e8;
   margin-left: 8px;
-  text-align: left;
+  margin-top: 3px;
+
+
 }
 
 .menu__subtitle-container {
@@ -212,7 +215,7 @@
 }
 
 .menu__title-dark {
-  padding: 9.5px 0px 9px 16.5px;
+  padding: 9px 0px 9px 16.5px;
   background-color: #3f4043;
   color: $green;
   font-size: 19px;
@@ -222,10 +225,10 @@
 }
 
 .menu__subtitle {
-  margin: 16px 20px 0px 14px;
+  margin: 15px 20px 0px 14px;
   width: 270px;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .large {
@@ -236,7 +239,7 @@
 }
 
 .menu__small-icon {
-  margin-top: 16px;
+  margin-top: 15px;
   margin-right: 20px;
   display: block;
 }
@@ -264,7 +267,7 @@
 .menu__item--title {
   font-size: 14px;
   // margin-bottom: 2px;
-  margin-left: 15px;
+  margin-left: 12px;
   margin-top: 5px;
 }
 
@@ -281,9 +284,10 @@
   font-size: 9px;
   text-align: justify;
   margin-left: 16px;
-  margin-top: 7px;
+  margin-top: 8px;
   margin-bottom: 5px;
   margin-right: 17px;
+  line-height: 9.4px
 }
 
 .fa-lg {
@@ -291,8 +295,8 @@
 }
 
 .menu__title-light {
-  margin-top: 35px;
-  padding: 9.5px 0px 9px 16.5px;
+  margin-top: 31px;
+  padding: 0.4em 0px 9px 16.5px;
   background-color: $green;
   color: $white;
   font-size: 19px;

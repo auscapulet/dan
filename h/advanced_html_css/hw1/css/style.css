@@ -8,26 +8,61 @@
   .navigation__logo {
     display: none;
   }
+  .navigation__items {
+    top: 74px;
+    right: 1px;
+  }
+  .navigation__item {
+    width: 216px;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    padding-left: 27px;
+    height: 36px;
+  }
   .navigation__title {
     font-size: 28px;
     padding-top: 20px;
     margin: 0px 0px 26px 28px;
   }
+  .navigation__icons-container {
+    position: relative;
+  }
   .fa-bars {
-    margin-left: 395px;
+    margin-left: 157px;
     width: 82px;
-    padding-top: 20px;
+    padding-top: 23px;
+    padding-bottom: 24px;
+    z-index: 1;
+  }
+  .fa-sm {
+    visibility: hidden;
+  }
+  .fa-2x {
+    visibility: visible;
+    width: 82px;
+    position: absolute;
+    top: 0px;
+  }
+  .fa-times {
+    color: #fff;
+    margin-left: 157px;
+    padding-top: 24px;
+    padding-bottom: 12px;
+    width: 82px;
   }
   .navigation__container {
     height: 346px;
     width: 640px;
     background: url("../images/640/header_bg_640.png") no-repeat center;
     margin-bottom: 5px;
+    font-family: "Lato", sans-serif;
   }
   .navigation__text {
     font-size: 32px;
-    margin: 0px 0px 22px 40px;
-    padding-top: 38px;
+    margin: 0px 0px 25px 40px;
+    padding-top: 32px;
+    line-height: 32px;
   }
   .navigation__text-link {
     color: #93bdc5;
@@ -149,12 +184,13 @@
     margin-top: 15px;
     margin-bottom: 10px;
     margin-right: 34px;
+    line-height: 18px;
   }
   .menu__title-light {
     padding: 19px 0px 18px 33px;
     font-size: 38px;
     letter-spacing: 1.6px;
-    margin-top: 40px;
+    margin-top: 45px;
   }
   .footer {
     width: 640px;
@@ -193,8 +229,12 @@
     top: 0px;
     right: 0px;
   }
+  .navigation__item {
+    padding: 0px;
+  }
   .navigation__item:nth-child(even) {
     background-color: #373c3f;
+    padding: 0px;
   }
   .navigation__items-hidden {
     visibility: visible;
@@ -225,13 +265,14 @@
   }
   .navigation__text {
     font-size: 54px;
-    margin: 0px 0px 40px 39px;
-    padding-top: 68px;
+    margin: 0px 0px 50px 30px;
+    padding-top: 60px;
+    line-height: 60px;
   }
   .navigation__text-link {
     color: #93bdc5;
-    margin-left: 40px;
-    font-size: 44px;
+    margin-left: 30px;
+    font-size: 42px;
   }
   .buttons-bar {
     width: 980px;
@@ -302,12 +343,13 @@
     font-size: 32px;
   }
   .menu__subtitle-container {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 30px;
     margin-right: 0px;
     width: 480px;
   }
   .menu__subtitle {
-    margin: 30px 0px 0px 19px;
+    margin: 5px 0px 0px 19px;
     width: 390px;
     font-weight: 400;
     font-size: 24px;
@@ -320,24 +362,26 @@
   }
   .menu__large-icon {
     margin-right: 0px;
+    margin-top: 0px;
   }
   .menu__item--title {
     font-size: 24px;
     margin-left: 18px;
-    margin-top: 0px;
+    margin-top: 10px;
   }
   .menu__item-price {
     font-size: 24px;
     margin-right: 17px;
-    margin-top: 0px;
+    margin-top: 10px;
   }
   .menu__item-description {
-    font-size: 16px;
+    font-size: 14px;
     text-align: justify;
     margin-left: 23px;
     margin-top: 12px;
-    margin-bottom: 22px;
+    margin-bottom: 12px;
     margin-right: 17px;
+    line-height: 21px;
   }
   .menu__title-light {
     margin-top: 0px;
@@ -348,7 +392,7 @@
   }
   .footer {
     width: 980px;
-    margin-top: 40px;
+    margin-top: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -382,8 +426,8 @@
   .navigation__items {
     height: 11px;
     margin-left: 32px;
-    padding-top: 39px;
-    padding-bottom: 46px;
+    padding-top: 42px;
+    padding-bottom: 44px;
   }
   .navigation__logo {
     margin-right: 38px;
@@ -391,8 +435,9 @@
   }
   .navigation__text {
     font-size: 60px;
-    margin: 0px 0px 52px 35px;
+    margin: 0px 0px 47px 35px;
     padding-top: 50px;
+    line-height: 66px;
   }
   .navigation__text-link {
     margin-left: 35px;
@@ -413,8 +458,8 @@
     width: 100%;
   }
   .buttons-bar__title {
-    padding-top: 176px;
-    padding-bottom: 184px;
+    padding-top: 180px;
+    padding-bottom: 180px;
     font-size: 41px;
     width: 100%;
   }
@@ -440,6 +485,7 @@
   }
   .pre-menu__text-container {
     margin-left: 0px;
+    margin-top: 72px;
   }
   .pre-menu__logo-container {
     margin-left: 0px;
@@ -454,25 +500,32 @@
   .pre-menu__sub-text {
     margin-left: 22px;
   }
+  .menu__right-wrapper {
+    margin-right: 20px;
+  }
   .menu {
     display: flex;
     flex-direction: row;
     width: 100%;
   }
   .menu__title-dark {
-    padding: 20px 0px 23px 14px;
+    padding: 18px 0px 19px 14px;
     width: 100%;
     font-size: 38px;
   }
   .menu__title-light {
-    padding: 20px 0px 23px 14px;
+    padding: 18px 0px 19px 14px;
     width: 100%;
     font-size: 38px;
   }
   .menu__subtitle-container {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     margin-right: 0px;
     width: 100%;
+  }
+  .menu__item--title {
+    margin-top: 0px;
+    font-size: 26px;
   }
   .menu__subtitle {
     font-size: 30px;
@@ -493,6 +546,7 @@
     margin-top: 17px;
     margin-bottom: 22px;
     margin-right: 17px;
+    line-height: 18px;
   }
   .footer {
     width: 100%;
@@ -521,25 +575,25 @@
 .navigation__title {
   font-size: 14px;
   color: #fff;
-  padding-top: 10px;
-  margin: 0px 0px 13px 14px;
+  padding-top: 8px;
+  margin: 0px 0px 13px 17px;
 }
 
 .fa-bars {
   color: #fff;
   background-color: #202529;
-  margin-left: 198px;
+  margin-left: 194px;
   width: 41px;
   text-align: center;
   vertical-align: 50%;
   padding-top: 10px;
   cursor: pointer;
-  height: 28px;
+  height: 27px;
 }
 
 .fa-times {
   color: #fff;
-  margin-left: 198px;
+  margin-left: 194px;
   width: 41px;
   padding-top: 10px;
   cursor: pointer;
@@ -559,6 +613,7 @@
 .navigation__container {
   height: 173px;
   width: 320px;
+  font-family: "Lato", sans-serif;
   background: url("../images/320/header_bg_320.png") no-repeat center;
 }
 
@@ -566,8 +621,9 @@
   color: #fff;
   font-size: 16px;
   font-weight: 700;
-  margin: 0px 0px 11px 20px;
-  padding-top: 19px;
+  margin: 0px 0px 6px 20px;
+  padding-top: 13px;
+  line-height: 22px;
 }
 
 .navigation__text-link {
@@ -578,12 +634,11 @@
 
 .navigation__items {
   height: 161px;
-  width: 171px;
   display: block;
   z-index: 100;
   position: relative;
   right: 182px;
-  top: 40px;
+  top: 37px;
 }
 
 .navigation__item:nth-child(even) {
@@ -596,12 +651,13 @@
 
 .navigation__item {
   background-color: #fff;
-  width: 171px;
+  width: 170px;
   font-size: 12px;
-  padding-top: 10px;
+  padding-top: 9px;
   padding-bottom: 0px;
-  padding-left: 11px;
+  padding-left: 12px;
   height: 22px;
+  cursor: pointer;
 }
 
 .selected {
@@ -683,22 +739,20 @@
 }
 
 .pre-menu__text-container {
-  margin-top: 22px;
-  margin-bottom: 20px;
+  margin-top: 24px;
+  margin-bottom: 12px;
 }
 
 .pre-menu__text {
   font-size: 20px;
-  margin-left: 8px;
-  margin-bottom: 2px;
+  margin-left: 6px;
 }
 
 .pre-menu__sub-text {
-  text-align: center;
   font-size: 10px;
   color: #e7e7e8;
   margin-left: 8px;
-  text-align: left;
+  margin-top: 3px;
 }
 
 .menu__subtitle-container {
@@ -713,7 +767,7 @@
 }
 
 .menu__title-dark {
-  padding: 9.5px 0px 9px 16.5px;
+  padding: 9px 0px 9px 16.5px;
   background-color: #3f4043;
   color: #a5cea6;
   font-size: 19px;
@@ -721,10 +775,10 @@
 }
 
 .menu__subtitle {
-  margin: 16px 20px 0px 14px;
+  margin: 15px 20px 0px 14px;
   width: 270px;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .large {
@@ -736,7 +790,7 @@
 }
 
 .menu__small-icon {
-  margin-top: 16px;
+  margin-top: 15px;
   margin-right: 20px;
   display: block;
 }
@@ -759,7 +813,7 @@
 
 .menu__item--title {
   font-size: 14px;
-  margin-left: 15px;
+  margin-left: 12px;
   margin-top: 5px;
 }
 
@@ -776,9 +830,10 @@
   font-size: 9px;
   text-align: justify;
   margin-left: 16px;
-  margin-top: 7px;
+  margin-top: 8px;
   margin-bottom: 5px;
   margin-right: 17px;
+  line-height: 9.4px;
 }
 
 .fa-lg {
@@ -786,8 +841,8 @@
 }
 
 .menu__title-light {
-  margin-top: 35px;
-  padding: 9.5px 0px 9px 16.5px;
+  margin-top: 31px;
+  padding: 0.4em 0px 9px 16.5px;
   background-color: #a5cea6;
   color: #fff;
   font-size: 19px;

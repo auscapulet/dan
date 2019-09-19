@@ -16,8 +16,8 @@
     // width: 600px;
     height: 11px;
     margin-left: 32px;
-    padding-top: 39px;
-    padding-bottom: 46px;
+    padding-top: 42px;
+    padding-bottom: 44px;
   }
 
   .navigation__logo{
@@ -27,8 +27,9 @@
 
   .navigation__text {
     font-size: 60px;
-    margin: 0px 0px 52px 35px;
+    margin: 0px 0px 47px 35px;
     padding-top: 50px;
+    line-height: 66px;
   }
 
   .navigation__text-link {
@@ -54,8 +55,8 @@
   }
 
   .buttons-bar__title {
-    padding-top: 176px;
-    padding-bottom: 184px;
+    padding-top: 180px;
+    padding-bottom: 180px;
     font-size: 41px;
     width: 100%;
   }
@@ -86,6 +87,7 @@
 
   .pre-menu__text-container {
     margin-left: 0px;
+    margin-top: 72px;
   }
 
   .pre-menu__logo-container {
@@ -105,6 +107,10 @@
     margin-left: 22px;
   }
 
+  .menu__right-wrapper {
+    margin-right: 20px;
+  }
+
   .menu {
     display: flex;
     flex-direction: row;
@@ -112,21 +118,26 @@
   }
 
   .menu__title-dark {
-    padding: 20px 0px 23px 14px;
+    padding: 18px 0px 19px 14px;
     width: 100%;
     font-size: 38px;
   }
 
   .menu__title-light {
-    padding: 20px 0px 23px 14px;
+    padding: 18px 0px 19px 14px;
     width: 100%;
     font-size: 38px;
   }
 
   .menu__subtitle-container {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     margin-right: 0px;
     width: 100% ;
+  }
+
+  .menu__item--title {
+    margin-top: 0px;
+    font-size: 26px;
   }
 
   .menu__subtitle {
@@ -151,6 +162,7 @@
     margin-top: 17px;
     margin-bottom: 22px;
     margin-right: 17px;
+    line-height: 18px;
   }
 
   .footer {

@@ -24,8 +24,13 @@
     right: 0px;
   }
 
+  .navigation__item {
+    padding: 0px;
+  }
+
   .navigation__item:nth-child(even)  {
     background-color: #373c3f;
+    padding: 0px;
   }
 
   .navigation__items-hidden{
@@ -63,14 +68,15 @@
 
   .navigation__text {
     font-size: 54px;
-    margin: 0px 0px 40px 39px;
-    padding-top: 68px;
+    margin: 0px 0px 50px 30px;
+    padding-top: 60px;
+    line-height: 60px;
   }
 
   .navigation__text-link {
     color: #93bdc5;
-    margin-left: 40px;
-    font-size: 44px;
+    margin-left: 30px;
+    font-size: 42px;
   }
 
   .buttons-bar {
@@ -164,13 +170,14 @@
   }
 
   .menu__subtitle-container {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 30px;
     margin-right: 0px;
     width: 480px ;
   }
 
   .menu__subtitle {
-    margin: 30px 0px 0px 19px;
+    margin: 5px 0px 0px 19px;
     width: 390px;
     font-weight: 400;
     font-size: 24px;
@@ -185,28 +192,30 @@
 
   .menu__large-icon {
     margin-right: 0px;
+    margin-top: 0px;
   }
 
   .menu__item--title {
     font-size: 24px;
     // margin-bottom: 2px;
     margin-left: 18px;
-    margin-top: 0px;
+    margin-top: 10px;
   }
 
   .menu__item-price {
     font-size: 24px;
     margin-right: 17px;
-    margin-top: 0px;
+    margin-top: 10px;
   }
 
   .menu__item-description {
-    font-size: 16px;
+    font-size: 14px;
     text-align: justify;
     margin-left: 23px;
     margin-top: 12px;
-    margin-bottom: 22px;
+    margin-bottom: 12px;
     margin-right: 17px;
+    line-height: 21px;
   }
 
   .menu__title-light {
@@ -219,7 +228,7 @@
 
   .footer {
     width: $tablet;
-    margin-top: 40px;
+    margin-top: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
