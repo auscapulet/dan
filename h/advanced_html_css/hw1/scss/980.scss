@@ -1,8 +1,9 @@
 @import "_vars.scss";
+@import "_mixins.scss";
 
 @media screen and (min-width: 980px) {
   .navigation {
-    width: $tablet;
+    min-width: $tablet;
   }
 
   .header__container {
@@ -61,9 +62,10 @@
 
   .navigation__container {
     height: 530px;
-    width: $tablet;
+    min-width: $tablet;
     font-family: $Lato;
     background: url("../images/980/header_bg_980.png") no-repeat center;
+    @include bg__setup;
   }
 
   .navigation__text {
@@ -80,7 +82,7 @@
   }
 
   .buttons-bar {
-    width: $tablet;
+    min-width: $tablet;
     font-family: $Lato;
   }
 
@@ -93,8 +95,8 @@
 
   .buttons-bar__container {
     display: flex;
-    flex-direction: row;
-    width: 327px;
+    justify-content: space-evenly;
+    // width: 327px;
     // display: grid;
     // grid-row: 321px 321px 321px;
   }
@@ -123,7 +125,7 @@
   }
 
   .pre-menu {
-    width: $tablet;
+    min-width: $tablet;
     display: flex;
     justify-content: space-between;
   }
@@ -157,13 +159,12 @@
   .menu {
     display: flex;
     flex-direction: row;
-    width: $tablet;
+    min-width: $tablet;
   }
 
   .menu__title-dark {
     padding: 27px 0px 23px 18px;
     letter-spacing: 0.8px;
-    width: 475px;
     font-size: 32px;
     // line-height: 32px;
     // height: 37px;
@@ -222,12 +223,10 @@
     margin-top: 0px;
     padding: 27px 0px 23px 18px;
     letter-spacing: 0.8px;
-    width: 464px;
     font-size: 32px;
   }
 
   .footer {
-    width: $tablet;
     margin-top: 70px;
     display: flex;
     flex-direction: row;

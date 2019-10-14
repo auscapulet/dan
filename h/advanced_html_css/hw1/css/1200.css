@@ -34,6 +34,7 @@
     background: url("../images/1200/header_bg_1200.png");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
   }
   .buttons-bar {
     width: 100%;

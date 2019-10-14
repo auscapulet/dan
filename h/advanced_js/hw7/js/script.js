@@ -63,13 +63,3 @@ function Hamburger(size, stuffing) {
 
 
 }
-
-function check(a, x) {
-  // your code here
-  
-  if (check.includes(x)) {
-    return true 
-  } else {
-  return false
-}
-}

@@ -1,10 +1,11 @@
 @import "_vars.scss";
+@import "_mixins.scss";
 @import "640.scss";
 @import "980.scss";
 @import "1200.scss";
 
 .navigation {
-  width: $mobileS;
+  min-width: $mobileS;
   background-color: #373c3f;
   font-family: $Lato;
   // margin-bottom: 4px;
@@ -13,6 +14,7 @@
 .header__container {
   display: flex;
   height: 37px;
+  justify-content: space-between;
   
 }
 
@@ -26,10 +28,10 @@
 .fa-bars {
   color: $white;
   background-color: #202529;
-  margin-left: 194px;
+  // margin-left: 194px;
   width: 41px;
   text-align: center;
-  vertical-align: 50%;
+  // vertical-align: 50%;
   padding-top: 10px;
   cursor: pointer;
   height: 27px;
@@ -37,7 +39,7 @@
 
 .fa-times {
   color: $white;
-  margin-left: 194px;
+  // margin-left: 194px;
   width: 41px;
   padding-top: 10px;
   cursor: pointer;
@@ -57,9 +59,11 @@
 
 .navigation__container {
   height: 173px;
-  width: $mobileS;
+  min-width: $mobileS;
   font-family: $Lato;
-  background: url("../images/320/header_bg_320.png") no-repeat center;
+  background: url("../images/320/pizza_header_320.png");
+  @include bg__setup
+
 }
 
 .navigation__text {
@@ -110,71 +114,88 @@
 }
 
 .buttons-bar {
-  width: $mobileS;
+  // min-width: $mobileS;
   font-family: $Lato;
 }
 
-.buttons-bar__delivery {
-  background: url('../images/320/pizza_delivery_bg_320.png');
+.buttons-bar__left-part {
+  width: 78%;
 }
 
-.buttons-bar__salads {
-  background: url('../images/320/ua_ux_salads_bg_320.png');
+.buttons-bar__delivery-title {
+  background: url('../images/320/pizza_320.png');
+  @include bg__setup;
 }
 
-.buttons-bar__desserts {
-  background: url('../images/320/desserts_bg_320.png') ;
+.buttons-bar__delivery-title {
+  padding: 10% 0 12% 25%;
+}
+
+.buttons-bar__salads-title {
+  background: url('../images/320/salads_320.png');
+  @include bg__setup;
+}
+
+.buttons-bar__salad--title {
+  padding: 11% 0 11% 30%;
+}
+
+.buttons-bar__desserts-title {
+  background: url('../images/320/desserts_320.png');
+  @include bg__setup;
+}
+
+.buttons-bar__dessert--title {
+  padding: 11% 0 11% 33.5%;
 }
 
 .buttons-bar__container {
-  display: grid;
-  grid-template-columns: 249px 71px;
+  display: flex;
+  text-decoration: none;
+  color: $white;
+  margin-top:1px;
+  flex-grow: 1;
 }
 
 .buttons-bar__title {
-  width: 249px;
-  height: 20px;
-  padding: 27.5px 0;
-  vertical-align: middle;
-  text-align: center;
-  margin-bottom: 1px;
   color: $white;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
+  padding: 24px 0 31px 63px;
+
 }
 
 .buttons-bar__action {
-  display: inline-block;
-  align-items: center;
-  width: 71px;
-  padding: 30px 0;
   background-color: $green;
-  color: $white;
-  cursor: pointer;
-  margin-bottom: 1px;
-  margin-right: 20px;
-  height: 75px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .buttons-bar--arrow-icon {
-  position: relative;
+  border: solid $white;
+  border-width: 0 2px 2px 0;
+  padding: 5%;
+  margin-right: 11px;
+  transform: rotate(-45deg)
 }
 
-.buttons-bar__action ::before {
-  content: "";
-  position: absolute;
-  bottom: -1.5px;
-  right: 2px;
-  border-top: 2px solid $white;
-  border-right: 2px solid $white;
-  height: 5px;
-  width: 5px;
-  transform: rotate(45deg);
-}
+// .buttons-bar__action ::before {
+//   content: "";
+//   position: absolute;
+//   bottom: -1.5px;
+//   right: 2px;
+//   border-top: 2px solid $white;
+//   border-right: 2px solid $white;
+//   height: 5px;
+//   width: 5px;
+//   transform: rotate(45deg);
+// }
 
 .pre-menu {
   font-family: $Lato;
-  width: $mobileS;
+  min-width: $mobileS;
   display: block;
 }
 
@@ -210,7 +231,7 @@
 }
 
 .menu {
-  width: $mobileS;
+  min-width: $mobileS;
   font-family: $Lato;
 }
 
@@ -304,7 +325,6 @@
 }
 
 .footer {
-  width: $mobileS;
   margin-top: 49px;
   display: flex;
   flex-direction: row;

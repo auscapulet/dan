@@ -1,6 +1,6 @@
 @media screen and (min-width: 640px) {
   .navigation {
-    width: 640px;
+    min-width: 640px;
   }
   .header__container {
     height: 74px;
@@ -53,10 +53,13 @@
   }
   .navigation__container {
     height: 346px;
-    width: 640px;
-    background: url("../images/640/header_bg_640.png") no-repeat center;
+    min-width: 640px;
     margin-bottom: 5px;
     font-family: "Lato", sans-serif;
+    background: url("../images/640/header_bg_640.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .navigation__text {
     font-size: 32px;
@@ -69,48 +72,43 @@
     margin-left: 40px;
     font-size: 28px;
   }
-  .buttons-bar {
-    width: 640px;
-  }
   .buttons-bar__delivery {
-    background: url("../images/640/pizza_delivery_bg_640.png");
+    background: url("../images/640/dessert_640.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-  .buttons-bar__salads {
-    background: url("../images/640/ua_ux_salads_bg_640.png");
+  .buttons-bar__delivery-title {
+    padding: 10% 0 12% 28%;
+  }
+  .buttons-bar__salad {
+    background: url("../images/640/salad_640.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .buttons-bar__salad--title {
+    padding: 11% 0 11% 24%;
   }
   .buttons-bar__desserts {
-    background: url("../images/640/desserts_bg_640.png");
+    background: url("../images/640/dessert_640.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .buttons-bar__dessert--title {
+    padding: 11% 0 11% 28%;
   }
   .buttons-bar__container {
-    display: grid;
-    grid-template-columns: 498px 142px;
+    display: flex;
   }
   .buttons-bar__title {
-    width: 498px;
-    height: 40px;
-    padding: 55px 0;
-    margin-bottom: 1px;
-    font-size: 40px;
-  }
-  .buttons-bar__action {
-    width: 142px;
-    padding: 60px 0;
-    margin-bottom: 1px;
-    margin-right: 40px;
-    height: 150px;
-  }
-  .buttons-bar__action ::before {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    right: 2px;
-    border-top: 4px solid #fff;
-    border-right: 4px solid #fff;
-    height: 10px;
-    width: 10px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
   }
   .pre-menu {
-    width: 640px;
+    min-width: 640px;
     display: block;
   }
   .pre-menu__logo-container,
@@ -134,7 +132,7 @@
     margin-bottom: 25px;
   }
   .menu {
-    width: 640px;
+    min-width: 640px;
   }
   .menu__title-dark {
     padding: 19px 0px 18px 33px;
@@ -193,7 +191,6 @@
     margin-top: 45px;
   }
   .footer {
-    width: 640px;
     margin-top: 117px;
     height: 97px;
   }
@@ -210,7 +207,7 @@
 
 @media screen and (min-width: 980px) {
   .navigation {
-    width: 980px;
+    min-width: 980px;
   }
   .header__container {
     height: 97px;
@@ -259,9 +256,12 @@
   }
   .navigation__container {
     height: 530px;
-    width: 980px;
+    min-width: 980px;
     font-family: "Lato", sans-serif;
     background: url("../images/980/header_bg_980.png") no-repeat center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .navigation__text {
     font-size: 54px;
@@ -275,7 +275,7 @@
     font-size: 42px;
   }
   .buttons-bar {
-    width: 980px;
+    min-width: 980px;
     font-family: "Lato", sans-serif;
   }
   .buttons-bar {
@@ -284,8 +284,7 @@
   }
   .buttons-bar__container {
     display: flex;
-    flex-direction: row;
-    width: 327px;
+    justify-content: space-evenly;
   }
   .buttons-bar__title {
     padding: 143px 0;
@@ -306,7 +305,7 @@
     background: url("../images/980/desserts_bg_980.png");
   }
   .pre-menu {
-    width: 980px;
+    min-width: 980px;
     display: flex;
     justify-content: space-between;
   }
@@ -334,12 +333,11 @@
   .menu {
     display: flex;
     flex-direction: row;
-    width: 980px;
+    min-width: 980px;
   }
   .menu__title-dark {
     padding: 27px 0px 23px 18px;
     letter-spacing: 0.8px;
-    width: 475px;
     font-size: 32px;
   }
   .menu__subtitle-container {
@@ -387,11 +385,9 @@
     margin-top: 0px;
     padding: 27px 0px 23px 18px;
     letter-spacing: 0.8px;
-    width: 464px;
     font-size: 32px;
   }
   .footer {
-    width: 980px;
     margin-top: 70px;
     display: flex;
     flex-direction: row;
@@ -449,6 +445,7 @@
     background: url("../images/1200/header_bg_1200.png");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
   }
   .buttons-bar {
     width: 100%;
@@ -562,7 +559,7 @@
 }
 
 .navigation {
-  width: 320px;
+  min-width: 320px;
   background-color: #373c3f;
   font-family: "Lato", sans-serif;
 }
@@ -570,6 +567,7 @@
 .header__container {
   display: flex;
   height: 37px;
+  justify-content: space-between;
 }
 
 .navigation__title {
@@ -582,10 +580,8 @@
 .fa-bars {
   color: #fff;
   background-color: #202529;
-  margin-left: 194px;
   width: 41px;
   text-align: center;
-  vertical-align: 50%;
   padding-top: 10px;
   cursor: pointer;
   height: 27px;
@@ -593,7 +589,6 @@
 
 .fa-times {
   color: #fff;
-  margin-left: 194px;
   width: 41px;
   padding-top: 10px;
   cursor: pointer;
@@ -612,9 +607,12 @@
 
 .navigation__container {
   height: 173px;
-  width: 320px;
+  min-width: 320px;
   font-family: "Lato", sans-serif;
-  background: url("../images/320/header_bg_320.png") no-repeat center;
+  background: url("../images/320/pizza_header_320.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .navigation__text {
@@ -665,71 +663,80 @@
 }
 
 .buttons-bar {
-  width: 320px;
   font-family: "Lato", sans-serif;
 }
 
-.buttons-bar__delivery {
-  background: url("../images/320/pizza_delivery_bg_320.png");
+.buttons-bar__left-part {
+  width: 78%;
 }
 
-.buttons-bar__salads {
-  background: url("../images/320/ua_ux_salads_bg_320.png");
+.buttons-bar__delivery-title {
+  background: url("../images/320/pizza_320.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.buttons-bar__desserts {
-  background: url("../images/320/desserts_bg_320.png");
+.buttons-bar__delivery-title {
+  padding: 10% 0 12% 25%;
+}
+
+.buttons-bar__salads-title {
+  background: url("../images/320/salads_320.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.buttons-bar__salad--title {
+  padding: 11% 0 11% 30%;
+}
+
+.buttons-bar__desserts-title {
+  background: url("../images/320/desserts_320.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.buttons-bar__dessert--title {
+  padding: 11% 0 11% 33.5%;
 }
 
 .buttons-bar__container {
-  display: grid;
-  grid-template-columns: 249px 71px;
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 1px;
+  flex-grow: 1;
 }
 
 .buttons-bar__title {
-  width: 249px;
-  height: 20px;
-  padding: 27.5px 0;
-  vertical-align: middle;
-  text-align: center;
-  margin-bottom: 1px;
   color: #fff;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
+  padding: 24px 0 31px 63px;
 }
 
 .buttons-bar__action {
-  display: inline-block;
-  align-items: center;
-  width: 71px;
-  padding: 30px 0;
   background-color: #a5cea6;
-  color: #fff;
-  cursor: pointer;
-  margin-bottom: 1px;
-  margin-right: 20px;
-  height: 75px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .buttons-bar--arrow-icon {
-  position: relative;
-}
-
-.buttons-bar__action ::before {
-  content: "";
-  position: absolute;
-  bottom: -1.5px;
-  right: 2px;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
-  height: 5px;
-  width: 5px;
-  transform: rotate(45deg);
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  padding: 5%;
+  margin-right: 11px;
+  transform: rotate(-45deg);
 }
 
 .pre-menu {
   font-family: "Lato", sans-serif;
-  width: 320px;
+  min-width: 320px;
   display: block;
 }
 
@@ -762,7 +769,7 @@
 }
 
 .menu {
-  width: 320px;
+  min-width: 320px;
   font-family: "Lato", sans-serif;
 }
 
@@ -850,7 +857,6 @@
 }
 
 .footer {
-  width: 320px;
   margin-top: 49px;
   display: flex;
   flex-direction: row;

@@ -1,8 +1,9 @@
 @import "_vars.scss";
+@import "_mixins.scss";
 
 @media screen and (min-width: 640px) {
   .navigation {
-    width: $mobileM;
+    min-width: $mobileM;
   }
 
   .header__container {
@@ -29,7 +30,6 @@
     padding-bottom: 0px;
     padding-left: 27px;
     height: 36px;
-   
   }
 
 
@@ -72,10 +72,11 @@
 
   .navigation__container {
     height: 346px;
-    width: $mobileM;
-    background: url("../images/640/header_bg_640.png") no-repeat center;
+    min-width: $mobileM;
     margin-bottom: 5px;
     font-family: $Lato;
+    background: url("../images/640/header_bg_640.png");
+    @include bg__setup;
   }
 
   .navigation__text {
@@ -93,55 +94,71 @@
   }
 
   .buttons-bar {
-    width: $mobileM;
+    // min-width: $mobileM;
+  }
+
+  .buttons-bar__left-part {
+
   }
   
   .buttons-bar__delivery {
-    background: url('../images/640/pizza_delivery_bg_640.png');
+    background: url('../images/640/dessert_640.png');
+    @include bg__setup;
+  }
+
+  .buttons-bar__delivery-title {
+    padding: 10% 0 12% 28%;
   }
   
-  .buttons-bar__salads {
-    background: url('../images/640/ua_ux_salads_bg_640.png');
+  .buttons-bar__salad {
+    background: url('../images/640/salad_640.png');
+    @include bg__setup;
+  }
+
+  .buttons-bar__salad--title {
+    padding: 11% 0 11% 24%;
   }
   
   .buttons-bar__desserts {
-    background: url('../images/640/desserts_bg_640.png') ;
+    background: url('../images/640/dessert_640.png');
+    @include bg__setup;
+  }
+
+  .buttons-bar__dessert--title {
+    padding: 11% 0 11% 28%;
   }
   
   .buttons-bar__container {
-    display: grid;
-    grid-template-columns: 498px 142px;
+    display: flex;
   }
 
   .buttons-bar__title {
-    width: 498px;
-    height: 40px;
-    padding: 55px 0;
-    margin-bottom: 1px;
-    font-size: 40px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
   }
   
   .buttons-bar__action {
-    width: 142px;
-    padding: 60px 0;
-    margin-bottom: 1px;
-    margin-right: 40px;
-    height: 150px;
+    // width: 142px;
+    // padding: 60px 0;
+    // margin-bottom: 1px;
+    // margin-right: 40px;
+    // height: 150px;
   }
 
-  .buttons-bar__action ::before {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    right: 2px;
-    border-top: 4px solid $white;
-    border-right: 4px solid $white;
-    height: 10px;
-    width: 10px;
-  }
+  // .buttons-bar__action ::before {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: -3px;
+  //   right: 2px;
+  //   border-top: 4px solid $white;
+  //   border-right: 4px solid $white;
+  //   height: 10px;
+  //   width: 10px;
+  // }
 
   .pre-menu {
-    width: $mobileM;
+    min-width: $mobileM;
     display: block;
   }
 
@@ -171,7 +188,7 @@
   }
 
   .menu {
-    width: $mobileM;
+    min-width: $mobileM;
   }
 
   .menu__title-dark {
@@ -240,7 +257,6 @@
   }
 
   .footer {
-    width: $mobileM;
     margin-top: 117px;
     height: 97px;
   }
