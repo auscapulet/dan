@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.ep_wrapper {
+  margin: 2rem;
+  border: 2px solid black;
+  padding: 1rem;
+  position: relative;
+}
+
+.title {
+  text-align: center;
+}
+
+.number {
+  text-align: center;
+}
+
+.opening {
+  font-size: 12px;
+  text-align: center;
+}
+
+.char-loader {
+  position: absolute;
+  bottom: 0.2rem;
+}

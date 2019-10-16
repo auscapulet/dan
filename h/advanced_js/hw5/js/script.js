@@ -1,65 +1,70 @@
-function Hamburger(size, stuffing) {
-    /**
-  * Класс, объекты которого описывают параметры гамбургера. 
-  * 
-  * @constructor
-  * @param size        Размер
-  * @param stuffing    Начинка
-  * @throws {HamburgerException}  При неправильном использовании
-  */
-  
-  /* Размеры, виды начинок и добавок */
+const wrapper = document.getElementById("wrapper")
 
-  Hamburger.SIZE_SMALL = "size_small";
-  Hamburger.SIZE_LARGE = "size_large";
-  Hamburger.STUFFING_CHEESE = "stuffing_cheese";
-  Hamburger.STUFFING_SALAD = "stuffing_salad";
-  Hamburger.STUFFING_POTATO = "stuffing_potato";
-  Hamburger.TOPPING_MAYO = "topping_mayo";
-  Hamburger.TOPPING_SPICE = "topping_spice";
+const req = new XMLHttpRequest()
+req.open("get", "https://swapi.co/api/films/?format=json")
+req.responseType = "json"
+req.send()
 
-  // collecting data
+req.onload = function() {
+  if (req.status !== 200) {
+    console.log(`Error ${req.status}: ${req.statusText}`)
+  } else {
+    const result = req.response.results
+    // finding film title
+    console.log(result)
 
-  var sizes = {};
-  var stuffings = {};
-  var toppings = {};
+    for (let i = 0; i < result.length; i++) {
+      const episode_title = result[i].title
+      const episode_number = result[i].episode_id
+      const episode_opening = result[i].opening_crawl
+      const episode_characters = result[i].characters
 
-  sizes[Hamburger.SIZE_SMALL] = {price: 50, calories: 20};
-  sizes[Hamburger.SIZE_LARGE] = {price: 100, calories: 40};
+      const ep_wrapper = document.createElement("div")
+      ep_wrapper.classList.add("ep_wrapper")
+      wrapper.append(ep_wrapper)
 
-  stuffings[Hamburger.STUFFING_CHEESE] = {price: 10, calories: 20};
-  stuffings[Hamburger.STUFFING_SALAD] = {price: 20, calories: 5};
-  stuffings[Hamburger.STUFFING_POTATO] ={price: 15, calories: 10};
+      const title = document.createElement("h4")
+      title.classList.add("title")
+      title.innerText = episode_title
+      ep_wrapper.append(title)
 
-  toppings[Hamburger.TOPPING_MAYO] = {price: 20, calories: 20};
-  toppings[Hamburger.TOPPING_SPICE] = {price: 15, calories: 5}
+      const number = document.createElement("h5")
+      number.classList.add("number")
+      number.innerText = `Episode #${episode_number}`
+      ep_wrapper.append(number)
 
-  // constructor
+      const crawl = document.createElement("p")
+      crawl.classList.add("opening")
+      crawl.innerText = episode_opening
+      ep_wrapper.append(crawl)
 
-  this.size = size;
-  this.stuffing = stuffing;
-  this._toppings = [];
+      const charBtnReq = document.createElement("button")
+      charBtnReq.classList.add("char-loader")
+      charBtnReq.innerText = "Load characters"
+      ep_wrapper.append(charBtnReq)
 
-  // validation input data
+      charBtnReq.addEventListener("click", e => {
+        const episode_characters_list = result[i].characters.forEach(item =>
+          getRequest()
+        )
+      })
 
-  function inputValidation(el) {
-    for(let key in Hamburger) {
-      if(el === Hamburger[key]) {
-        return  true;
+      function getRequest(url, func) {
+        const request = new XMLHttpRequest()
+        request.open("GET", url)
+        request.send()
+        request.onload = function() {
+          if (request.status !== 200) {
+            return `${request.statusText}${request.status}`
+          } else {
+            func(request.response)
+          }
+        }
       }
     }
-    return false;
   }
+}
 
-  if (!size || !stuffing) {
-    throw new HamburgerException (`Sorry, but you must choose both - size and stuffing for`)
-  };
-  if(!inputValidation(size)) {
-    throw new HamburgerException(`Sorry, but there invalid "${size}". Please choose correct size`)
-  };
-  if(!inputValidation(stuffing)) {
-    throw new HamburgerException(`Sorry, but there invalid "${stuffing}".Please choose correct size`)
-  }
-
-
+req.onerror = function() {
+  alert("Failed request")
 }
