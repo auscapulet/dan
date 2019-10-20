@@ -15,7 +15,6 @@ req.onload = function() {
       const episode_number = result[i].episode_id
       const episode_opening = result[i].opening_crawl
       const episode_characters = result[i].characters
-      console.log(episode_characters)
       const ep_wrapper = document.createElement("div")
       ep_wrapper.classList.add("ep_wrapper")
       wrapper.append(ep_wrapper)
@@ -43,7 +42,6 @@ req.onload = function() {
       charBtnReq.addEventListener("click", e => {
         const episode_characters_list = Promise.all(
           episode_characters.forEach(item => {
-            console.log(item)
             const req = new XMLHttpRequest()
             req.open("GET", item)
             req.responseType = "json"
@@ -63,25 +61,6 @@ req.onload = function() {
           })
         )
       })
-
-      // function getRequest(url) {
-      //   const request = new XMLHttpRequest()
-      //   request.open("GET", url)
-      //   request.setRequestHeader(
-      //     "Content-type",
-      //     "application/x-www-form-urlencoded"
-      //   )
-      //   request.responseType = "json"
-      //   request.send()
-      //   request.onload = function() {
-      //     if (request.status !== 200) {
-      //       return `${request.statusText}${request.status}`
-      //     } else {
-      //       const resp = request.response
-      //       console.log(resp)
-      //     }
-      //   }
-      // }
     }
   }
 }
