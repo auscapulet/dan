@@ -1,0 +1,42 @@
+.table {
+  margin: 10px auto;
+  border: 2px solid black;
+}
+
+.cell {
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid black;
+}
+
+.score-text {
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 6rem;
+  height: 3rem;
+  margin: 0 0.2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.new-game-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.3rem;
+}
+
+.new-game-btn {
+  width: 19rem;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
