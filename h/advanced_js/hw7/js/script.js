@@ -1,27 +1,35 @@
-const planetsURLS = [
-  "https://swapi.co/api/planets/",
-  "https://swapi.co/api/planets/2",
-  "https://swapi.co/api/planets/3",
-  "https://swapi.co/api/planets/4",
-  "https://swapi.co/api/planets/5",
-  "https://swapi.co/api/planets/6",
-  "https://swapi.co/api/planets/7"
-]
+for (let i = 1; i <= 61; i++) {
+  let planetLink = fetch(`https://swapi.co/api/planets/${i}`)
+  planetLink
+    .then(res => res.json())
+    .then(res => {
+      const board = document.querySelector(".board")
+      const itemContainer = document.createElement("div")
+      itemContainer.classList.add("item-container")
+      board.append(itemContainer)
 
-Promise.all(planetsURLS.map(item => fetch(item)))
-  .then(responses => Promise.all(responses.map(res => res.json())))
-  .then(texts => {
-    console.log(texts)
+      const planetName = document.createElement("h4")
+      planetName.innerText = `Planet: ${res.name}`
+      itemContainer.append(planetName)
 
-    // for (let i = 0; i < texts.length; i++) {
-    //   console.log(i.name)
-    // }
+      const terrain = document.createElement("p")
+      terrain.innerText = `Terrain: ${res.terrain}`
+      itemContainer.append(terrain)
 
-    // let obj = texts.find(i => i.name === "name")
-    // console.log(obj)
-    // let filter = texts.filter(i => i.name === name)
-    // console.log(filter)
+      const climate = document.createElement("p")
+      climate.innerText = `Climate: ${res.climate}`
+      itemContainer.append(climate)
 
-    // let some = texts.filter(i => i.name === name)
-    // console.log(some)
-  })
+      let req = res.residents.forEach(item => {
+        const req = fetch(item)
+        req
+          .then(res => res.json())
+          .then(res => {
+            const board = document.querySelector(".board")
+            const charName = document.createElement("p")
+            charName.innerText = `Resident Name: ${res.name}`
+            board.append(charName)
+          })
+      })
+    })
+}
