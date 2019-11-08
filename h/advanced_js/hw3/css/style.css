@@ -25,6 +25,7 @@
   margin: 0 0.2rem;
   font-size: 1.2rem;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .new-game-btn-container {
@@ -39,4 +40,20 @@
   height: 3rem;
   border-radius: 5px;
   font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.red {
+  background-color: red;
+  cursor: pointer;
+}
+
+.blue {
+  background-color: blue;
+  cursor: pointer;
+}
+
+.green {
+  background-color: green;
+  cursor: pointer;
 }
