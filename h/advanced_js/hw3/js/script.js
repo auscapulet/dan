@@ -1,72 +1,83 @@
 const cells = document.querySelectorAll(".cell")
-const cell = document.getElementsByClassName("cell")
+//const cell = document.getElementsByClassName("cell")
 
 const scoreText = document.querySelector(".score-text")
 
 let playerScore = 0
 let enemyScore = 0
 
-console.log(scoreText)
-
 let lastCell
 
-const id = function uniqueId() {
-  for (let i = 0; i < cell.length; i++) {
-    cell[i].id = i + 1
-  }
-}
-id()
+// const id = function uniqueId() {
+//   for (let i = 0; i < cell.length; i++) {
+//     cell[i].id = i + 1
+//   }
+// }
+// id()
 
 let timeUp = false
 
 function game(gameDiff) {
   const r = Math.floor(Math.random() * cells.length)
-  function activeCell() {
-    const selectedCell = cell[r]
-    if (selectedCell == lastCell) {
-      return activeCell
+
+  function randomCell(cells) {
+    const r = Math.floor(Math.random() * cells.length)
+
+    const selectedCell = cells[r]
+
+    if (
+      selectedCell == lastCell ||
+      selectedCell.classList.contains("red") ||
+      selectedCell.classList.contains("green")
+    ) {
+      // enemyScore--
+      console.log("wink")
+      return randomCell(cells)
     }
     lastCell = selectedCell
+    return selectedCell
   }
+  //randomCell(cells)
 
   function gameRun(gameDiff) {
-    cell[r].classList.add("blue")
-    cell[r].addEventListener("click", active)
+    const cell = randomCell(cells)
+    cell.classList.add("blue")
+    cell.addEventListener("click", active)
 
     function active() {
-      cell[r].classList.remove("blue")
-      cell[r].classList.add("green")
+      cell.classList.remove("blue")
+      cell.classList.add("green")
     }
 
     let cellFired = false
     setTimeout(() => {
-      cell[r].classList.add("red")
-      cell[r].classList.remove("blue")
+      cell.classList.add("red")
+      cell.classList.remove("blue")
 
-      if (cell[r].classList.contains("red")) {
+      if (cell.classList.contains("red")) {
         enemyScore++
       }
 
-      if (cell[r].classList.contains("green")) {
-        cell[r].classList.remove("red")
+      if (cell.classList.contains("green")) {
+        cell.classList.remove("red")
+        enemyScore--
         playerScore++
       }
 
-      cell[r].removeEventListener("click", active)
+      cell.removeEventListener("click", active)
       if (playerScore === 50 || enemyScore === 50) {
         timeUp = true
       }
       if (!timeUp) game(gameDiff)
 
       const playerScoreText = document.querySelector(".player-score")
-      playerScoreText.textContent = playerScore
+      playerScoreText.textContent = `Your score: ${playerScore}  `
       scoreText.append(playerScoreText)
 
       const computerScore = document.querySelector(".computer-score")
-      computerScore.textContent = enemyScore
-      console.log(enemyScore)
+      computerScore.textContent = `Enemy score: ${enemyScore}`
+
       scoreText.append(computerScore)
-      console.log(enemyScore)
     }, gameDiff)
   }
 
@@ -77,7 +88,7 @@ function game(gameDiff) {
 
 const easyBtn = document.querySelector(".easy")
 easyBtn.addEventListener("click", () => {
-  gameDiff = 10000
+  gameDiff = 2000
   console.log(gameDiff)
 })
 const mediumBtn = document.querySelector(".medium")
@@ -94,6 +105,9 @@ hardBtn.addEventListener("click", () => {
 const newGameBtn = document.querySelector(".new-game-btn")
 newGameBtn.addEventListener("click", () => {
   game(gameDiff)
+
+  // playerScore = 0
+  // enemyScore = 0
 })
 
 // class Game {
