@@ -1,5 +1,4 @@
 const cells = document.querySelectorAll(".cell")
-
 const scoreText = document.querySelector(".score-text")
 
 let playerScore = 0
@@ -7,28 +6,33 @@ let enemyScore = 0
 let lastCell
 let timeUp = false
 
-function game(gameDiff) {
-  const r = Math.floor(Math.random() * cells.length)
+class Game {
+  constructor(gameDiff) {
+    this.gameDiff = gameDiff
+    this.lastCell = undefined
+    this.timeUp = false
+    playerScore = 0
+    enemyScore = 0
+  }
 
-  function randomCell(cells) {
+  randomCell(cells) {
     const r = Math.floor(Math.random() * cells.length)
 
     const selectedCell = cells[r]
 
     if (
-      selectedCell == lastCell ||
+      selectedCell == +this.lastCell ||
       selectedCell.classList.contains("red") ||
       selectedCell.classList.contains("green")
     ) {
-      return randomCell(cells)
+      return this.randomCell(cells)
     }
-    lastCell = selectedCell
+    this.lastCell = selectedCell
     return selectedCell
   }
-  //randomCell(cells)
 
-  function gameRun(gameDiff) {
-    const cell = randomCell(cells)
+  gameRun() {
+    const cell = this.randomCell(cells)
     cell.classList.add("blue")
     cell.addEventListener("click", active)
 
@@ -54,9 +58,12 @@ function game(gameDiff) {
 
       cell.removeEventListener("click", active)
       if (playerScore === 50 || enemyScore === 50) {
-        timeUp = true
+        this.timeUp = true
       }
-      if (!timeUp) game(gameDiff)
+      if (!this.timeUp) this.gameRun()
+
+      if (playerScore === 50) alert("Gongratz, you win!")
+      if (enemyScore === 50) alert("Sorry, but your enemy win")
 
       const playerScoreText = document.querySelector(".player-score")
       playerScoreText.textContent = `Your score: ${playerScore}  `
@@ -66,31 +73,35 @@ function game(gameDiff) {
       computerScore.textContent = `Enemy score: ${enemyScore}`
 
       scoreText.append(computerScore)
-    }, gameDiff)
+    }, this.gameDiff)
   }
-
-  gameRun(gameDiff)
 }
-
-// Game modes
 
 const easyBtn = document.querySelector(".easy")
 easyBtn.addEventListener("click", () => {
-  gameDiff = 2000
+  const easyGame = new Game(1500)
+
+  easyGame.gameRun()
 })
 const mediumBtn = document.querySelector(".medium")
 mediumBtn.addEventListener("click", () => {
-  gameDiff = 1000
+  const mediumGame = new Game(1000)
+  mediumGame.gameRun()
 })
 const hardBtn = document.querySelector(".hard")
 hardBtn.addEventListener("click", () => {
-  gameDiff = 500
+  const hardGame = new Game(500)
+  hardGame.gameRun()
 })
 
 const newGameBtn = document.querySelector(".new-game-btn")
 newGameBtn.addEventListener("click", () => {
-  game(gameDiff)
+  cells.forEach(element => {
+    element.classList.remove("blue")
+    element.classList.remove("red")
+    element.classList.remove("green")
+  })
 
-  // playerScore = 0
-  // enemyScore = 0
+  playerScore = 0
+  enemyScore = 0
 })
