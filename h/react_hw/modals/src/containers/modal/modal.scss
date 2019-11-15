@@ -1,0 +1,15 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background: yellow;
+}
+
+.modal-content {
+  background: grey;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 45%;
+  width: 50%;
+}

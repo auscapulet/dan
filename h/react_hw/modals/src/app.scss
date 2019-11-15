@@ -1,0 +1,28 @@
+.buttons-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  // background-color: antiquewhite;
+  display: flex;
+}
+
+.opener-btn {
+  height: 50px;
+  border-radius: 3%;
+  border: 1px solid silver;
+  margin: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.red {
+  background-color: red;
+  box-shadow: 2px 2px 2px red;
+}
+
+.blue {
+  background-color: blue;
+  box-shadow: 2px 2px 2px blue;
+}
