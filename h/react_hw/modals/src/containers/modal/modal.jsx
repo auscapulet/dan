@@ -44,7 +44,6 @@ export default class Modal extends React.Component {
                   action={this.closeModal}
                 />
               </div>
-
               <p className="modal-text">{text}</p>
               <div className="button-container">
                 <ActionButton

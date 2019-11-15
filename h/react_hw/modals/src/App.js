@@ -12,11 +12,14 @@ class App extends React.Component {
     secondFired: false
   };
   openFirstModal = () => {
-    this.setState({ firstFired: true, secondFired: false });
+    this.setState({ firstFired: !this.state.firstFired, secondFired: false });
   };
 
   openSecondModal = () => {
-    this.setState({ secondFired: true, firstFired: false });
+    this.setState({
+      secondFired: !this.state.secondFired,
+      firstFired: false
+    });
   };
 
   render() {
