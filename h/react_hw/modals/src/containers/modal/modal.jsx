@@ -1,9 +1,6 @@
 import React from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import ActionButton from "../../components/button/action-button";
-import { Close } from "@fortawesome/free-solid-svg-icons";
 
 import "./modal.scss";
 
@@ -19,17 +16,17 @@ export default class Modal extends React.Component {
   };
 
   agreedAnswer = () => {
-    alert("SURE");
+    alert("Sure");
   };
 
   refusedAnswer = () => {
-    alert("as you want");
+    alert("As you want");
   };
 
   render() {
-    const { text, className, action, header } = this.props;
-    const { isOpened, closeModal } = this.state;
-    // const element = <FontAwesomeIcon icon={close} />;
+    const { text, className, header } = this.props;
+    const { isOpened } = this.state;
+
     console.log("modal", this.state);
     return (
       <div className="">
@@ -39,23 +36,28 @@ export default class Modal extends React.Component {
             onClick={() => this.closeModal()}
           >
             <div className="modal-content">
-              <ActionButton
-                className="close"
-                text="X"
-                action={this.closeModal}
-              />
-              <h2>{header}</h2>
-              <p>{text}</p>
-              <ActionButton
-                text="yes"
-                className="agree"
-                action={this.agreedAnswer}
-              />
-              <ActionButton
-                text="no"
-                className="disagree"
-                action={this.refusedAnswer}
-              />
+              <div className="modal-header">
+                <h2 className="modal-header-text">{header}</h2>
+                <ActionButton
+                  className="close"
+                  text="X"
+                  action={this.closeModal}
+                />
+              </div>
+
+              <p className="modal-text">{text}</p>
+              <div className="button-container">
+                <ActionButton
+                  text="Yes"
+                  className="dialog-btn"
+                  action={this.agreedAnswer}
+                />
+                <ActionButton
+                  text="No"
+                  className="dialog-btn"
+                  action={this.refusedAnswer}
+                />
+              </div>
             </div>
           </div>
         ) : null}

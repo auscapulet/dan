@@ -2,23 +2,28 @@
   width: 200px;
   height: 30px;
   cursor: pointer;
+  outline: none;
 
   &.close {
     color: black;
-    width: 25px;
-    height: 25px;
-    border-radius: 25%;
+    width: 20px;
+    height: 20px;
+    border-radius: 0%;
     font-size: 1rem;
+    background-color: #d44637;
+    color: #fff;
+    border: none;
   }
 
-  &.agree {
-    background-color: green;
+  &.dialog-btn {
     width: 100px;
-    border-radius: 5%;
-  }
-  &.disagree {
-    background-color: red;
-    width: 100px;
-    border-radius: 5%;
+    border-radius: 5px;
+    height: 43px;
+    width: 103px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #b3382c;
+    margin: 0 5px;
+    border: none;
   }
 }
