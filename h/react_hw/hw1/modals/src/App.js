@@ -1,7 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import Modal from "./containers/modal/modal";
-
 import ActionButton from "./components/button/action-button";
 
 import "./app.scss";
@@ -12,18 +12,20 @@ class App extends React.Component {
     secondFired: false
   };
   openFirstModal = () => {
-    this.setState({ firstFired: !this.state.firstFired, secondFired: false });
+    this.setState(prevState => ({
+      firstFired: !prevState.firstFired,
+      secondFired: false
+    }));
   };
 
-  openSecondModal = () => {
-    this.setState({
-      secondFired: !this.state.secondFired,
+  openSecondModal = e => {
+    this.setState(prevState => ({
+      secondFired: !prevState.secondFired,
       firstFired: false
-    });
+    }));
   };
 
   render() {
-    console.log("app state", this.state);
     const { firstFired, secondFired } = this.state;
     return (
       <>
@@ -59,5 +61,9 @@ class App extends React.Component {
     );
   }
 }
+
+App.propTypes = {
+  text: PropTypes.string
+};
 
 export default App;

@@ -7,7 +7,7 @@ const actionButton = props => {
 
   return (
     <div>
-      <button className={`${className} btn`} onClick={() => action()}>
+      <button className={`${className} btn`} onClick={action}>
         {text}
       </button>
     </div>

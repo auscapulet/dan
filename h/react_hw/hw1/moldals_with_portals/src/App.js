@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Icon, Container } from "semantic-ui-react";
 
 import Modal from "./Containers/Modal/Modal";
-import "./App.scss";
+// import "./App.scss";
 class App extends React.Component {
   constructor() {
     super();
