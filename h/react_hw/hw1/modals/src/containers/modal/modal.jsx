@@ -1,10 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import ActionButton from "../../components/button/action-button";
 
 import "./modal.scss";
 
-export default class Modal extends React.Component {
+class Modal extends React.Component {
   constructor(props) {
     super(props);
 
@@ -34,7 +35,6 @@ export default class Modal extends React.Component {
   render() {
     const { text, header } = this.props;
     const { isOpened } = this.state;
-
     return (
       <>
         {isOpened ? (
@@ -70,3 +70,9 @@ export default class Modal extends React.Component {
     );
   }
 }
+
+Modal.propTypes = {
+  text: PropTypes.string
+};
+
+export default Modal;
