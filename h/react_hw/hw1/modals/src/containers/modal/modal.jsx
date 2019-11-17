@@ -12,17 +12,17 @@ class Modal extends React.Component {
     this.state = { isOpened: true };
   }
 
-  closeModal = event => {
-    let target = event.target;
-    console.log(target.tagName);
-    if (target.tagName !== "DIV") {
-      this.setState(state => {
-        return {
-          isOpened: !state.isOpened
-        };
-      });
-    }
-  };
+  // closeModal = event => {
+  //   let target = event.target;
+  //   console.log(target.tagName);
+  //   if (target.tagName !== "DIV") {
+  //     this.setState(state => {
+  //       return {
+  //         isOpened: !state.isOpened
+  //       };
+  //     });
+  //   }
+  // };
 
   agreedAnswer = () => {
     alert("Sure");
@@ -33,39 +33,33 @@ class Modal extends React.Component {
   };
 
   render() {
-    const { text, header } = this.props;
+    const { text, header, action } = this.props;
     const { isOpened } = this.state;
     return (
       <>
-        {isOpened ? (
-          <section className="modal" onClick={this.closeModal}>
-            <div className="modal-content">
-              <div className="modal-header">
-                <h2 className="modal-header-text">{header}</h2>
+        <section className="modal" onClick={action}>
+          <div className="modal-content">
+            <div className="modal-header">
+              <h2 className="modal-header-text">{header}</h2>
+              <ActionButton className="close" text="X" onClick={action} />
+            </div>
+            <div>
+              <div className="modal-text">{text}</div>
+              <div className="button-container">
                 <ActionButton
-                  className="close"
-                  text="X"
-                  onClick={() => this.closeModal()}
+                  text="Yes"
+                  className="dialog-btn"
+                  action={this.agreedAnswer}
+                />
+                <ActionButton
+                  text="No"
+                  className="dialog-btn"
+                  action={this.refusedAnswer}
                 />
               </div>
-              <div>
-                <div className="modal-text">{text}</div>
-                <div className="button-container">
-                  <ActionButton
-                    text="Yes"
-                    className="dialog-btn"
-                    action={this.agreedAnswer}
-                  />
-                  <ActionButton
-                    text="No"
-                    className="dialog-btn"
-                    action={this.refusedAnswer}
-                  />
-                </div>
-              </div>
             </div>
-          </section>
-        ) : null}
+          </div>
+        </section>
       </>
     );
   }

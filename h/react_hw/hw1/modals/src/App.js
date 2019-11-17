@@ -8,25 +8,41 @@ import "./app.scss";
 class App extends React.Component {
   state = {
     firstFired: false,
-    secondFired: false
+    secondFired: false,
+    isOpened: false
   };
 
   openFirstModal = () => {
     this.setState(prevState => ({
       firstFired: !prevState.firstFired,
-      secondFired: false
+      // secondFired: false,
+      isOpened: true
     }));
   };
 
   openSecondModal = () => {
     this.setState(prevState => ({
       secondFired: !prevState.secondFired,
-      firstFired: false
+      // firstFired: false,
+      isOpened: true
     }));
   };
 
+  closeModal = event => {
+    let target = event.target;
+    console.log(target.tagName);
+    if (target.tagName !== "DIV") {
+      this.setState(state => {
+        return {
+          isOpened: false
+        };
+      });
+    }
+  };
+
   render() {
-    const { firstFired, secondFired } = this.state;
+    const { firstFired, secondFired, isOpened } = this.state;
+    console.log(this.state);
     return (
       <>
         <div className="buttons-container">
@@ -41,19 +57,19 @@ class App extends React.Component {
             text="Open second modal"
           />
         </div>
-        {firstFired ? (
+        {firstFired && isOpened ? (
           <Modal
-            text="Sounds pathetic, but some people will ke that"
+            text="Sounds pathetic, but some people will like that"
             className="first-modal"
-            action={this.openFirstModal}
+            action={this.closeModal}
             header="Do you want to live forever?"
           />
         ) : null}
-        {secondFired ? (
+        {secondFired && isOpened ? (
           <Modal
             text="... and start live forver"
             className="second-modal"
-            action={this.openSecondModal}
+            action={this.closeModal}
             header="Quit existential crisis?"
           />
         ) : null}
