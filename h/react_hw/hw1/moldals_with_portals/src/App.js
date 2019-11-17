@@ -1,5 +1,4 @@
 import React from "react";
-import { Button, Container } from "semantic-ui-react";
 
 import Modal from "./Containers/Modal/Modal";
 import "./App.scss";
@@ -10,58 +9,58 @@ class App extends React.Component {
     this.state = {
       firstFired: false,
       secondFired: false,
-      showModal: false
+      isOpened: false
     };
   }
 
   openFirstModal = () => {
-    this.setState({
-      firstFired: !this.state.firstFired,
-      secondFired: false,
-      showModal: true
-    });
+    this.setState(prevState => ({
+      firstFired: !prevState.firstFired,
+      isOpened: true
+    }));
   };
 
   openSecondModal = () => {
-    this.setState({
-      secondFired: !this.state.secondFired,
-      firstFired: false,
-      showModal: true
-    });
+    this.setState(prevState => ({
+      secondFired: !prevState.secondFired,
+      isOpened: true
+    }));
   };
 
-  modalToggler = event => {
+  closeModal = event => {
     let target = event.target;
-
-    this.setState({
-      showModal: false
-    });
+    if (target.tagName !== "DIV") {
+      this.setState(state => {
+        return {
+          isOpened: false
+        };
+      });
+    }
   };
 
   render() {
-    const { firstFired, secondFired, showModal } = this.state;
-    console.log("app", this.state);
+    const { firstFired, secondFired, isOpened } = this.state;
     return (
       <>
-        <Button className="red btn" onClick={() => this.openFirstModal()}>
+        <button className="red btn" onClick={this.openFirstModal}>
           First
-        </Button>
-        <Button className="blue btn" onClick={() => this.openSecondModal()}>
+        </button>
+        <button className="blue btn" onClick={this.openSecondModal}>
           Second
-        </Button>
+        </button>
 
-        {firstFired && showModal ? (
+        {firstFired && isOpened ? (
           <Modal
             header="Do you want to live forever?"
             text="Sounds pathetic, but some people will like that"
-            action={this.modalToggler}
+            action={this.closeModal}
           />
         ) : null}
-        {secondFired && showModal ? (
+        {secondFired && isOpened ? (
           <Modal
             header="Quit existential crisis?"
             text="... and start live forver"
-            action={this.modalToggler}
+            action={this.closeModal}
           />
         ) : null}
       </>

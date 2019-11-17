@@ -1,6 +1,5 @@
 import React from "react";
 import { createPortal } from "react-dom";
-import { Button, Container } from "semantic-ui-react";
 
 const modalRoot = document.getElementById("modal");
 
@@ -22,7 +21,7 @@ class Modal extends React.Component {
   render() {
     const { header, text, action } = this.props;
     return createPortal(
-      <div className="modal">
+      <section className="modal" onClick={action}>
         <div className="modal-content">
           <div className="modal-header">
             <h2 className="modal-header-text">{header}</h2>
@@ -34,7 +33,7 @@ class Modal extends React.Component {
             <button>NO</button>
           </div>
         </div>
-      </div>,
+      </section>,
 
       this.element
     );

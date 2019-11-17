@@ -15,7 +15,6 @@ class App extends React.Component {
   openFirstModal = () => {
     this.setState(prevState => ({
       firstFired: !prevState.firstFired,
-      // secondFired: false,
       isOpened: true
     }));
   };
@@ -23,7 +22,6 @@ class App extends React.Component {
   openSecondModal = () => {
     this.setState(prevState => ({
       secondFired: !prevState.secondFired,
-      // firstFired: false,
       isOpened: true
     }));
   };
