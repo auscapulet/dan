@@ -6,12 +6,10 @@ import {
   CardBody,
   CardTitle,
   Button,
-  Row,
-  Col,
-  Container,
-  ButtonGroup,
-  CardHeader
+  ButtonGroup
 } from "reactstrap";
+
+import CardModal from "../Modal/Modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
@@ -31,8 +29,11 @@ class Good extends React.Component {
     this.setState({ isFav: !this.state.isFav });
   }
 
+  toggleModal() {
+    this.setState({ isOpened: !this.state.isOpened });
+  }
+
   render() {
-    console.log(this.state.isFav);
     const { name, price, imageUrl } = this.props;
     const { isFav } = this.state;
     return (
@@ -46,7 +47,7 @@ class Good extends React.Component {
             <CardText className="good-price p-1"> {`${price}$`}</CardText>
           </div>
           <ButtonGroup size="lg">
-            <Button size="xs">Add to the card</Button>
+            <CardModal buttonLabel={"Add to card"} />
             <Button
               size="xs"
               className={isFav ? "fav ml-1" : "ml-1"}

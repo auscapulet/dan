@@ -3,14 +3,7 @@ import React from "react";
 import Good from "../../Components/Card/Card";
 import SHOP_DATA from "../../shop.data";
 
-import {
-  Container,
-  Row,
-  Col,
-  CardGroup,
-  CardDeck,
-  CardColumns
-} from "reactstrap";
+import { Container, CardColumns } from "reactstrap";
 
 class CardsContainer extends React.Component {
   constructor() {
@@ -29,11 +22,9 @@ class CardsContainer extends React.Component {
       <>
         <Container className="mt-5">
           <CardColumns>
-            {items
-              // .filter((item, idx) => idx < 4)
-              .map(({ id, ...otherProps }) => (
-                <Good key={id} {...otherProps} />
-              ))}
+            {items.map(({ id, ...otherProps }) => (
+              <Good key={id} {...otherProps} />
+            ))}
           </CardColumns>
         </Container>
       </>
