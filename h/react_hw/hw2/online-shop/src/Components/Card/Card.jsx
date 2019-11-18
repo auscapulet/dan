@@ -27,8 +27,8 @@ class Good extends React.Component {
     };
   }
 
-  toggleFav(e) {
-    this.setState({ isFav: this.state.isFav });
+  toggleFav() {
+    this.setState({ isFav: !this.state.isFav });
   }
 
   render() {
@@ -50,7 +50,7 @@ class Good extends React.Component {
             <Button
               size="xs"
               className={isFav ? "fav ml-1" : "ml-1"}
-              onClick={this.toggleFav}
+              onClick={() => this.toggleFav()}
             >
               <FontAwesomeIcon icon={faStar} />
             </Button>
