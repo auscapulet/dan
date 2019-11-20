@@ -25,8 +25,19 @@ class Good extends React.Component {
     };
   }
 
-  toggleFav() {
+  toggleFav(e) {
     this.setState({ isFav: !this.state.isFav });
+    const favItem = this.props.item;
+
+    localStorage.setItem("Card", favItem);
+
+    // console.log(e.currentTarget);
+    // localStorage.getItem("Card");
+
+    // function checker(id) {
+    //   // console.log(this.state.localData);
+    //   // const findItem = this.props.find(id => )
+    // }
   }
 
   toggleModal() {
@@ -34,10 +45,21 @@ class Good extends React.Component {
   }
 
   render() {
-    const { name, price, imageUrl } = this.props;
+    // console.log(JSON.parse(localStorage.getItem("Cards")));
+    // console.log(JSON.parse(localStorage.getItem("Card")));
+
+    const { name, price, imageUrl, id } = this.props.item;
     const { isFav } = this.state;
+    const {
+      addToFav,
+      addToCart,
+      item,
+      removeFormFav,
+      favItemToggler
+    } = this.props;
+
     return (
-      <Card sm="6" xs="12" mt="2" outline color="secondary">
+      <Card sm="6" xs="12" mt="2" id={id} outline color="secondary">
         <CardImg src={`${imageUrl}`} className="card-image" />
         <CardBody>
           <div className="card-headers">
@@ -47,11 +69,17 @@ class Good extends React.Component {
             <CardText className="good-price p-1"> {`${price}$`}</CardText>
           </div>
           <ButtonGroup size="lg">
-            <CardModal buttonLabel={"Add to card"} />
+            <CardModal buttonLabel={"Add to card"} addToCart={addToCart} />
             <Button
               size="xs"
               className={isFav ? "fav ml-1" : "ml-1"}
-              onClick={() => this.toggleFav()}
+              // onClick={e => {
+              //   addToFav(item);
+              //   removeFormFav(item);
+
+              //   this.toggleFav(e);
+              // }}
+              onClick={e => favItemToggler(item)}
             >
               <FontAwesomeIcon icon={faStar} />
             </Button>

@@ -12,18 +12,6 @@ class Modal extends React.Component {
     this.state = { isOpened: true };
   }
 
-  // closeModal = event => {
-  //   let target = event.target;
-  //   console.log(target.tagName);
-  //   if (target.tagName !== "DIV") {
-  //     this.setState(state => {
-  //       return {
-  //         isOpened: !state.isOpened
-  //       };
-  //     });
-  //   }
-  // };
-
   agreedAnswer = () => {
     alert("Sure");
   };
