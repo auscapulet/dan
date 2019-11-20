@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Modal, ModalHeader, ModalFooter } from "reactstrap";
 
 const CardModal = props => {
-  const { buttonLabel, className } = props;
+  const { buttonLabel, className, addToCart } = props;
 
   const [modal, setModal] = useState(false);
 
@@ -19,7 +19,7 @@ const CardModal = props => {
         </ModalHeader>
 
         <ModalFooter>
-          <Button color="primary" onClick={toggle}>
+          <Button color="primary" onClick={(addToCart, toggle)}>
             Yes
           </Button>{" "}
           <Button color="secondary" onClick={toggle}>
