@@ -19,8 +19,6 @@ class CardsContainer extends React.Component {
   favItemToggler = item => {
     let idx = item.id;
     let arr = this.state;
-    console.log(idx);
-    console.log(arr);
 
     const favItemChecker = (obj, val) => {
       return Object.entries(obj).find(i => i[1] === val);
