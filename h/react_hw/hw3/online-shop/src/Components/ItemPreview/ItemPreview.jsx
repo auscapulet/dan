@@ -5,24 +5,21 @@ import {
   Button,
   CardImg,
   CardTitle,
-  CardText,
-  CardDeck,
   CardSubtitle,
-  CardBody,
-  Row,
-  Col
+  CardBody
 } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrash, faStar } from "@fortawesome/free-solid-svg-icons";
 
 import "./ItemPreview.scss";
 
 function ItemPreview(props) {
-  const { name, url, price } = props;
+  const { name, url, price, removeFromCart, removeFromFav, item } = props;
   const imgStyle = {
     maxHeight: 256,
     maxWidth: 235
   };
+  console.log(removeFromFav);
   return (
     <Card>
       <CardImg
@@ -37,7 +34,10 @@ function ItemPreview(props) {
         <CardTitle>{name}</CardTitle>
         <CardSubtitle>{price}$</CardSubtitle>
         <Button className="btn-md">
-          <FontAwesomeIcon icon={faTrash} />
+          <FontAwesomeIcon icon={faTrash} onClick={e => removeFromCart(item)} />
+        </Button>
+        <Button className="btn-md">
+          <FontAwesomeIcon icon={faStar} onClick={e => removeFromFav(item)} />
         </Button>
       </CardBody>
     </Card>

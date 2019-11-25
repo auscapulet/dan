@@ -3,7 +3,9 @@ import ItemPreview from "../../Components/ItemPreview/ItemPreview";
 
 function CartItemsList(props) {
   const itemsList = props.location.state;
-  console.log(props.location.state);
+  const removeFromCart = props.location.removeFromCart;
+  console.log(props);
+
   return (
     <div>
       {itemsList.map((item, index) => (
@@ -12,6 +14,8 @@ function CartItemsList(props) {
           price={item.price}
           name={item.name}
           url={item.imageUrl}
+          removeFromCart={removeFromCart}
+          item={item}
         />
       ))}
     </div>

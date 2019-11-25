@@ -1,11 +1,13 @@
 import React from "react";
 
 import ItemPreview from "../../Components/ItemPreview/ItemPreview";
-import { Container, CardColumns, Button, Row } from "reactstrap";
+import { CardColumns } from "reactstrap";
 
 function FavItemsList(props) {
   const itemsList = props.location.state;
-  console.log(props.location.state);
+  const removeFromFav = props.location.removeFromFav;
+  console.log(removeFromFav);
+  console.log(props);
   return (
     <CardColumns>
       {itemsList.map((item, index) => (
@@ -14,6 +16,8 @@ function FavItemsList(props) {
           price={item.price}
           name={item.name}
           url={item.imageUrl}
+          item={item}
+          removeFromFav={removeFromFav}
         />
       ))}
     </CardColumns>
