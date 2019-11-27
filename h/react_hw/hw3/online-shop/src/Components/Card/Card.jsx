@@ -9,7 +9,7 @@ import {
   ButtonGroup
 } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 import CardModal from "../Modal/Modal";
 
@@ -18,6 +18,7 @@ import "./Card.scss";
 function Good(props) {
   const [isFav, setFav] = useState(false);
   const [isOpened, setOpened] = useState(false);
+  const [isAddedOnCart, addItemToCart, removeItemFromCart] = useState(false);
 
   function toggleFav(e) {
     setFav({ isFav: !isFav });
@@ -27,15 +28,9 @@ function Good(props) {
     setOpened({ isOpened: !isOpened });
   }
   const { name, price, imageUrl, id } = props.item;
-  const { addToFav, addToCart, item, removeFromFav, favItemToggler } = props;
-  console.log("Fav", isFav);
-  console.log(isOpened);
+  const { addToFav, addToCart, item, removeFromFav } = props;
+
   return (
-    // console.log(JSON.parse(localStorage.getItem("Cards")));
-    // console.log(JSON.parse(localStorage.getItem("Card")));
-
-    // const { isFav } = this.state;
-
     <Card sm="6" xs="12" mt="2" id={id} outline color="secondary">
       <CardImg src={`${imageUrl}`} className="card-image" />
       <CardBody>
@@ -54,12 +49,6 @@ function Good(props) {
           <Button
             size="lg"
             className={isFav ? "fav ml-1" : "ml-1"}
-            // onClick={e => {
-            //   addToFav(item);
-            //   removeFormFav(item);
-
-            //   this.toggleFav(e);
-            // }}
             onClick={e => {
               addToFav(item);
               toggleFav();
@@ -67,8 +56,9 @@ function Good(props) {
           >
             <FontAwesomeIcon icon={faStar} />
           </Button>
-          {/* <Button onClick={e => addToFav(item)} />
-            <Button onClick={e => removeFromFav(item)} /> */}
+          <Button onClick={e => removeFromFav(item)}>
+            <FontAwesomeIcon icon={faTrash} />
+          </Button>
         </ButtonGroup>
       </CardBody>
     </Card>

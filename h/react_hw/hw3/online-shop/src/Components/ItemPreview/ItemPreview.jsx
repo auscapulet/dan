@@ -11,6 +11,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faStar } from "@fortawesome/free-solid-svg-icons";
 
+import Modal from "../../Components/Modal/Modal";
+
 import "./ItemPreview.scss";
 
 function ItemPreview(props) {
@@ -19,7 +21,7 @@ function ItemPreview(props) {
     maxHeight: 256,
     maxWidth: 235
   };
-  console.log(removeFromFav);
+
   return (
     <Card>
       <CardImg
@@ -33,9 +35,7 @@ function ItemPreview(props) {
       <CardBody className="d-flex ">
         <CardTitle>{name}</CardTitle>
         <CardSubtitle>{price}$</CardSubtitle>
-        <Button className="btn-md">
-          <FontAwesomeIcon icon={faTrash} onClick={e => removeFromCart(item)} />
-        </Button>
+        <Modal className="btn-md" removeFromCart={removeFromCart} />
         <Button className="btn-md">
           <FontAwesomeIcon icon={faStar} onClick={e => removeFromFav(item)} />
         </Button>
