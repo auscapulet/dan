@@ -48,13 +48,15 @@ class CardsContainer extends React.Component {
     }));
   };
 
-  removeFormFav = item => {
-    let arr = [...this.state.favItems];
+  removeFromFav = item => {
     let idx = item.id;
-    if (idx !== -1) {
-      arr.splice(idx, 1);
-      this.setState({ favItems: arr });
-    }
+    let list = this.state.favItems;
+    this.setState(state => {
+      const favItems = list.filter(item => item.id !== idx);
+      return {
+        favItems
+      };
+    });
   };
 
   render() {
@@ -71,7 +73,7 @@ class CardsContainer extends React.Component {
                 item={item}
                 addToFav={this.addToFav}
                 addToCart={this.addToCart}
-                removeFormFav={this.removeFormFav}
+                removeFromFav={this.removeFromFav}
                 favItemToggler={this.favItemToggler}
               />
             ))}

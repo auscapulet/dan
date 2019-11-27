@@ -54,7 +54,7 @@ class Good extends React.Component {
       addToFav,
       addToCart,
       item,
-      removeFormFav,
+      removeFromFav,
       favItemToggler
     } = this.props;
 
@@ -83,6 +83,8 @@ class Good extends React.Component {
             >
               <FontAwesomeIcon icon={faStar} />
             </Button>
+            <Button onClick={e => addToFav(item)} />
+            <Button onClick={e => removeFromFav(item)} />
           </ButtonGroup>
         </CardBody>
       </Card>
