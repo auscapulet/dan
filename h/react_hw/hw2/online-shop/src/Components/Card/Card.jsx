@@ -37,7 +37,7 @@ class Good extends React.Component {
 
   render() {
     const { name, price, imageUrl, id } = this.props.item;
-    const { isFav, toggleFav } = this.state;
+    const { isFav } = this.state;
     const { addToFav, addToCart, item, removeFromFav } = this.props;
 
     return (
