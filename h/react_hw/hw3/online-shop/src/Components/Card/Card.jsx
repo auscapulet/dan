@@ -17,16 +17,11 @@ import "./Card.scss";
 
 function Good(props) {
   const [isFav, setFav] = useState(false);
-  const [isOpened, setOpened] = useState(false);
-  const [isAddedOnCart, addItemToCart, removeItemFromCart] = useState(false);
 
   function toggleFav(e) {
     setFav({ isFav: !isFav });
   }
 
-  function toggleModal() {
-    setOpened({ isOpened: !isOpened });
-  }
   const { name, price, imageUrl, id } = props.item;
   const { addToFav, addToCart, item, removeFromFav } = props;
 
@@ -48,7 +43,8 @@ function Good(props) {
           />
           <Button
             size="lg"
-            className={isFav ? "fav ml-1" : "ml-1"}
+            className="ml-1"
+            style={{ color: isFav ? "#d4af37" : "fff" }}
             onClick={e => {
               addToFav(item);
               toggleFav();

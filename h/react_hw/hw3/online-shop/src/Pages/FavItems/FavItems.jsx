@@ -6,8 +6,6 @@ import { CardColumns } from "reactstrap";
 function FavItemsList(props) {
   const itemsList = props.location.state;
   const removeFromFav = props.location.removeFromFav;
-  console.log(removeFromFav);
-  console.log(props);
   return (
     <CardColumns>
       {itemsList.map((item, index) => (
