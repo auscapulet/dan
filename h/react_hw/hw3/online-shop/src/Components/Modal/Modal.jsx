@@ -5,7 +5,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const CardModal = props => {
-  const { buttonLabel, className, addToCart, item, removeFromCart } = props;
+  const {
+    buttonLabel,
+    className,
+    addToCart,
+    item,
+    removeFromCart,
+    addedToCart
+  } = props;
 
   const [modal, setModal] = useState(false);
 
@@ -27,7 +34,7 @@ const CardModal = props => {
             onClick={e => {
               toggle();
 
-              removeFromCart ? removeFromCart(item) : addToCart(item);
+              removeFromCart ? removeFromCart(item) : addedToCart(item); //addToCart
 
               // onClick={e => removeFromCart(item)}
             }}

@@ -17,14 +17,24 @@ import "./Card.scss";
 
 function Good(props) {
   const [isFav, setFav] = useState(false);
+  const [isAddedToCart, addToCart] = useState(false);
 
   function toggleFav(e) {
     setFav({ isFav: !isFav });
   }
 
-  const { name, price, imageUrl, id } = props.item;
-  const { addToFav, addToCart, item, removeFromFav } = props;
+  function addedToCart(e) {
+    addToCart({ isAddedToCart: true });
+  }
 
+  function removeFromCart(e) {
+    addToCart({ isAddedToCart: false });
+  }
+
+  const { name, price, imageUrl, id } = props.item;
+  const { item, removeFromFav } = props; //addToCart, addToFav
+
+  console.log(isFav, isAddedToCart);
   return (
     <Card sm="6" xs="12" mt="2" id={id} outline color="secondary">
       <CardImg src={`${imageUrl}`} className="card-image" />
@@ -38,15 +48,16 @@ function Good(props) {
         <ButtonGroup size="lg">
           <CardModal
             buttonLabel={"Add to card"}
-            addToCart={addToCart}
+            // addToCart={addToCart}
             item={item}
+            addedToCart={addedToCart}
           />
           <Button
             size="lg"
             className="ml-1"
             style={{ color: isFav ? "#d4af37" : "fff" }}
             onClick={e => {
-              addToFav(item);
+              // addToFav(item);
               toggleFav();
             }}
           >

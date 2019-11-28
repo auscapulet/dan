@@ -11,13 +11,22 @@ function CardsContainer() {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    setItems([...items, ...SHOP_DATA]);
+    let items = [];
+    const upatedItems = SHOP_DATA.forEach(
+      item => (
+        (item.isFav = false), (item.isAddedToCart = false), items.push(item)
+      )
+    );
+    setItems(items);
   }, []);
 
   function addToFav(item) {
-    setFavItems([...favItems, item]);
+    setFavItems([items]);
   }
 
+  function addToFav(item) {
+    setFavItems([items]);
+  }
   function addToCart(item) {
     setCartItems([...cartItems, item]);
   }
@@ -32,6 +41,7 @@ function CardsContainer() {
     setFavItems(list);
   }
 
+  console.log("ITEMS", items);
   return (
     <>
       <Container className="mt-5">
@@ -39,15 +49,19 @@ function CardsContainer() {
           <Link
             to={{
               pathname: "cartitems",
-              state: cartItems,
-              removeFromCart
+              state: items //  cartItems     removeFromCart
             }}
           >
             Cart items
           </Link>
         </Button>
         <Button>
-          <Link to={{ pathname: "favitems", state: favItems, removeFromFav }}>
+          <Link
+            to={{
+              pathname: "favitems",
+              state: items //favItems, removeFromFav
+            }}
+          >
             Favourite items
           </Link>
         </Button>
@@ -56,8 +70,8 @@ function CardsContainer() {
             <Good
               key={item.id}
               item={item}
-              addToFav={addToFav}
-              addToCart={addToCart}
+              // addToFav={addToFav}
+              // addToCart={addToCart}
               removeFromFav={removeFromFav}
             />
           ))}
